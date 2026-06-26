@@ -5,35 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CARGUARD — B2B αξεσουάρ αυτοκινήτου | Γίνε συνεργάτης</title>
 <meta name="description" content="Αξεσουάρ αυτοκινήτου που φέρνουν κέρδος. Γίνε B2B συνεργάτης της CARGUARD: ποιοτικά προϊόντα, χαμηλές τιμές, απόθεμα, εγγύηση, γρήγορη παράδοση.">
-<!-- Landing GR — CARGUARD / Globiz. Κείμενο: συνιστάται έλεγχος από native speaker πριν τη δημοσίευση. -->
 <style>
 :root{--red:#e1121d;--red2:#ff2b2b;--bg:#0b0b0d;--bg2:#141417;--line:#26262b;--tx:#f3f3f5;--mut:#a7a7ad}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.55}
 img{max-width:100%;display:block}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-a.btn,.btn{display:inline-block;background:var(--red);color:#fff;font-weight:800;text-decoration:none;padding:16px 30px;border-radius:12px;font-size:17px;letter-spacing:.3px;box-shadow:0 8px 24px rgba(225,18,29,.35);transition:.15s}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:800;text-decoration:none;padding:16px 30px;border-radius:12px;font-size:17px;box-shadow:0 8px 24px rgba(225,18,29,.35);transition:.15s}
 .btn:hover{background:#ff1f2b;transform:translateY(-2px)}
 header{position:sticky;top:0;z-index:50;background:rgba(11,11,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;gap:16px;padding:12px 20px}
 header img{height:30px}
 header .btn{margin-left:auto;padding:11px 20px;font-size:14px}
-.hero{position:relative;padding:64px 0 56px;background:radial-gradient(900px 500px at 70% -10%,rgba(225,18,29,.25),transparent 60%),linear-gradient(180deg,#141417,#0b0b0d)}
+.hero{padding:60px 0 52px;background:radial-gradient(900px 500px at 70% -10%,rgba(225,18,29,.25),transparent 60%),linear-gradient(180deg,#141417,#0b0b0d)}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .kick{color:var(--red2);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:13px;margin-bottom:14px}
-.hero h1{font-size:44px;line-height:1.1;font-weight:900;margin-bottom:16px}
+.hero h1{font-size:42px;line-height:1.1;font-weight:900;margin-bottom:16px}
 .hero p.lead{font-size:19px;color:var(--mut);margin-bottom:26px}
-.hero .visual{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.5)}
-section{padding:56px 0;border-top:1px solid var(--line)}
+.portrait{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.55);position:relative}
+.portrait img{width:100%}
+.portrait .tag{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.8));padding:24px 18px 14px;font-weight:800}
+.portrait .tag small{display:block;color:var(--red2);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+section{padding:54px 0;border-top:1px solid var(--line)}
 h2{font-size:30px;font-weight:900;margin-bottom:10px}
 h2 .r{color:var(--red2)}
-.sub{color:var(--mut);font-size:17px;margin-bottom:30px;max-width:760px}
+.sub{color:var(--mut);font-size:17px;margin-bottom:28px;max-width:780px}
 .pain{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:26px 28px;font-size:17px;color:#dcdce0}
 .pain b{color:#fff}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
 .chip{background:#1c1c20;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;font-size:14px}
 .chip::before{content:"✓ ";color:var(--red2)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.prods{grid-template-columns:repeat(5,1fr)}
+.prods figure{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+.prods img{width:100%;height:210px;object-fit:cover;border-radius:8px;background:#000}
+.prods figcaption{margin-top:10px;font-weight:700;font-size:13px;color:#e9e9ec}
+.range{margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
 .card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:22px;position:relative}
 .card .n{position:absolute;top:-14px;left:18px;background:var(--red);width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-weight:900}
 .card h3{font-size:19px;margin:10px 0 8px}
@@ -43,10 +50,13 @@ h2 .r{color:var(--red2)}
 .stat{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:24px 14px}
 .stat .v{font-size:30px;font-weight:900;color:var(--red2)}
 .stat .l{color:var(--mut);font-size:14px;margin-top:6px}
-.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
 .fact{display:flex;gap:12px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
 .fact .i{color:var(--red2);font-weight:900;font-size:18px}
-.brands{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center;color:#cfcfd4;font-weight:800;font-size:18px;opacity:.9;margin-top:18px}
+.partners-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:8px}
+.pcard{background:#fff;border-radius:12px;padding:16px 8px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:96px}
+.pcard img{height:40px;width:40px;object-fit:contain}
+.pcard span{color:#15151a;font-weight:800;font-size:12.5px}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .rev{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:22px}
 .rev .stars{color:#ffc107;margin-bottom:10px;letter-spacing:2px}
@@ -58,35 +68,35 @@ h2 .r{color:var(--red2)}
 .faq summary::before{content:"+ ";color:var(--red2);font-weight:900}
 .faq details[open] summary::before{content:"– "}
 .faq p{color:var(--mut);padding:0 0 16px;font-size:15px}
-.cta{background:radial-gradient(700px 360px at 50% 0,rgba(225,18,29,.3),transparent 60%),var(--bg2);text-align:center;border-radius:20px;border:1px solid var(--line);padding:48px 24px;margin:10px 0}
+.cta{background:radial-gradient(700px 360px at 50% 0,rgba(225,18,29,.3),transparent 60%),var(--bg2);border-radius:20px;border:1px solid var(--line);padding:44px 24px;margin:10px 0}
+.giftwrap{display:flex;gap:28px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center}
+.giftimg{width:210px;border-radius:16px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5)}
 .cta h2{font-size:32px}
-.gift{display:inline-block;margin:16px 0 22px;background:#1c1c20;border:1px dashed var(--red);border-radius:999px;padding:10px 20px;font-weight:700}
+.gift{display:inline-block;margin:14px 0 20px;background:#1c1c20;border:1px dashed var(--red);border-radius:999px;padding:10px 20px;font-weight:700}
 footer{padding:34px 0;color:var(--mut);font-size:14px;text-align:center;border-top:1px solid var(--line)}
 footer b{color:#fff}
-@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:34px}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:32px}.grid{grid-template-columns:1fr}.prods{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}.partners-grid{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
 <header><div class="wrap"><img src="assets/logo.png" alt="CARGUARD"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή B2B</a></div></header>
 
-<section class="hero">
-  <div class="wrap">
-    <div>
-      <div class="kick">ο αγαπημένος σας B2B συνεργάτης</div>
-      <h1>Αξεσουάρ αυτοκινήτου που φέρνουν <span style="color:var(--red2)">κέρδος</span> — όχι σκόνη στο ράφι.</h1>
-      <p class="lead">Έχετε κατάστημα ανταλλακτικών ή εταιρεία διανομής και θέλετε εμπόρευμα που <b>κινείται</b>; Γίνετε συνεργάτης της CARGUARD.</p>
-      <a class="btn" href="https://carguard.shop/user/registration">Εγγραφή εταιρείας (B2B) →</a>
-    </div>
-    <div class="visual"><img src="assets/hero.png" alt="CARGUARD αξεσουάρ αυτοκινήτου"></div>
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="kick">ο αγαπημένος σας B2B συνεργάτης</div>
+    <h1>Αξεσουάρ αυτοκινήτου που φέρνουν <span style="color:var(--red2)">κέρδος</span> — όχι σκόνη στο ράφι.</h1>
+    <p class="lead">Έχετε κατάστημα ανταλλακτικών ή εταιρεία διανομής και θέλετε εμπόρευμα που <b>κινείται</b>; Γίνετε συνεργάτης της CARGUARD.</p>
+    <a class="btn" href="https://carguard.shop/user/registration">Εγγραφή εταιρείας (B2B) →</a>
   </div>
-</section>
+  <div class="portrait"><img src="assets/hajni.jpg" alt="CARGUARD - ο συνεργάτης σας"><div class="tag"><small>CARGUARD · Globiz Group</small>Ο συνεργάτης σας για ποιοτικά αξεσουάρ αυτοκινήτου</div></div>
+</div></section>
 
 <section><div class="wrap">
   <h2>Ξέρουμε <span class="r">πώς είναι…</span></h2>
   <div class="pain">
     Μπαίνει ένας και λέει: <b>«Πιο φθηνά, αφεντικό… το βρήκα online.»</b> Έρχεται άλλος με το προϊόν στο χέρι: <b>«Άλλαξέ το με την εγγύηση, τώρα.»</b><br><br>
-    Και τότε πέφτουν και τα υπόλοιπα: έλεγχοι, χαρτιά, ερωτήσεις για πιστοποιητικά, μεταφράσεις, εγκρίσεις… και πρέπει να είστε εντάξει με όλα — χωρίς να κλείσετε το μαγαζί.<br><br>
-    Και στο τέλος του μήνα έρχονται οι πραγματικότητες: φόροι, μισθοί, ενοίκια, λογαριασμοί. Δουλεύετε από το πρωί ως το βράδυ και καμιά φορά μένετε χωρίς ρευστό ακριβώς όταν το χρειάζεστε πιο πολύ.
+    Και τότε πέφτουν και τα υπόλοιπα: έλεγχοι, χαρτιά, πιστοποιητικά, μεταφράσεις, εγκρίσεις… και πρέπει να είστε εντάξει με όλα — χωρίς να κλείσετε το μαγαζί.<br><br>
+    Και στο τέλος του μήνα: φόροι, μισθοί, ενοίκια, λογαριασμοί. Δουλεύετε από το πρωί ως το βράδυ και καμιά φορά μένετε χωρίς ρευστό ακριβώς όταν το χρειάζεστε πιο πολύ.
   </div>
 </div></section>
 
@@ -94,66 +104,92 @@ footer b{color:#fff}
   <h2>Γι' αυτό υπάρχει η <span class="r">CARGUARD</span></h2>
   <p class="sub">Για να έχετε έναν συνεργάτη που μπορείτε να εμπιστευτείτε ακόμη και σε περιόδους κρίσης:</p>
   <div class="chips"><span class="chip">εξαιρετικά προϊόντα</span><span class="chip">χαμηλές τιμές</span><span class="chip">απόθεμα</span><span class="chip">υποστήριξη</span></div>
-  <p class="sub" style="margin:6px 0 14px">+ ποιοτική συσκευασία και μοναδικό, ελκυστικό design</p>
+  <p class="sub" style="margin:6px 0 12px">+ ποιοτική συσκευασία και μοναδικό, ελκυστικό design</p>
   <div class="chips"><span class="chip">πιστοποιητικά</span><span class="chip">μεταφράσεις</span><span class="chip">εγκρίσεις</span><span class="chip">εγγυήσεις</span></div>
 </div></section>
 
 <section><div class="wrap">
-  <h2>ΟΦΕΛΗ <span class="r">για το κατάστημά σας</span></h2>
-  <p class="sub">Γιατί η συνεργασία με τη CARGUARD αυξάνει τις πωλήσεις και το περιθώριό σας.</p>
-  <div class="grid">
-    <div class="card"><div class="n">1</div><h3>Universal προϊόντα</h3><div class="ex">π.χ. universal καλύμματα καθισμάτων</div><p>Πουλάτε το ίδιο προϊόν σε πολύ περισσότερους πελάτες. Γρήγορη κυκλοφορία αποθέματος, προσιτές τιμές για ευρύ κοινό.</p></div>
-    <div class="card"><div class="n">2</div><h3>Premium συσκευασία</h3><div class="ex">π.χ. λάμπες αυτοκινήτου</div><p>Τα προϊόντα ξεχωρίζουν στο ράφι και εμπνέουν εμπιστοσύνη. Η premium εμφάνιση τραβά την προσοχή — περισσότερες αυθόρμητες αγορές.</p></div>
-    <div class="card"><div class="n">3</div><h3>Ανταγωνιστική τιμή</h3><div class="ex">π.χ. λάμπες H7, ακροδέκτες μπαταρίας</div><p>Καλά περιθώρια ακόμη και σε μικρές ποσότητες. Χαμηλή τιμή & υψηλή ζήτηση, σταθερή κυκλοφορία και συχνές εισπράξεις.</p></div>
-    <div class="card"><div class="n">4</div><h3>Γρήγορη κυκλοφορία</h3><div class="ex">π.χ. υαλοκαθαριστήρες</div><p>Σταθερή ζήτηση όλο τον χρόνο. Υγιές cashflow, χωρίς δεσμευμένα χρήματα στο απόθεμα. Συνεχείς πωλήσεις.</p></div>
-    <div class="card"><div class="n">5</div><h3>Ελεγμένη ποιότητα</h3><div class="ex">σαφή ευρωπαϊκά πρότυπα</div><p>Λιγότερες επιστροφές και παράπονα. Χαμηλότερο κόστος, ικανοποιημένοι & πιστοί πελάτες.</p></div>
-    <div class="card"><div class="n">6</div><h3>Διαφοροποιημένη γκάμα</h3><div class="ex">λύσεις για πολλές κατηγορίες</div><p>Γεμίζετε εύκολα τα ράφια. Οι πελάτες βρίσκουν πάντα κάτι χρήσιμο και επιστρέφουν. Μικρότερος εμπορικός κίνδυνος.</p></div>
+  <h2>Τα <span class="r">προϊόντα</span> μας</h2>
+  <p class="sub">Δημοφιλή αξεσουάρ με γρήγορη κυκλοφορία — λάμπες LED & αλογόνου, καλύμματα, υαλοκαθαριστήρες και πολλά άλλα.</p>
+  <div class="grid prods">
+    <figure><img src="assets/prod/h7led.jpg" alt="Λάμπες LED H7"><figcaption>Λάμπες LED H7</figcaption></figure>
+    <figure><img src="assets/prod/h4led.jpg" alt="Λάμπες LED H4"><figcaption>Λάμπες LED H4</figcaption></figure>
+    <figure><img src="assets/prod/h1led.jpg" alt="Λάμπες LED H1"><figcaption>Λάμπες LED H1</figcaption></figure>
+    <figure><img src="assets/prod/halh7.jpg" alt="Λάμπες αλογόνου H7"><figcaption>Αλογόνου H7</figcaption></figure>
+    <figure><img src="assets/prod/halh4.jpg" alt="Λάμπες αλογόνου H4"><figcaption>Αλογόνου H4</figcaption></figure>
   </div>
+  <div class="range"><img src="assets/range.jpg" alt="Πλήρης γκάμα αξεσουάρ CARGUARD"></div>
 </div></section>
 
 <section style="background:var(--bg2)"><div class="wrap">
+  <h2>ΟΦΕΛΗ <span class="r">για το κατάστημά σας</span></h2>
+  <p class="sub">Γιατί η συνεργασία με τη CARGUARD αυξάνει τις πωλήσεις και το περιθώριό σας.</p>
+  <div class="grid">
+    <div class="card"><div class="n">1</div><h3>Universal προϊόντα</h3><div class="ex">π.χ. universal καλύμματα καθισμάτων</div><p>Πουλάτε το ίδιο προϊόν σε πολύ περισσότερους πελάτες. Γρήγορη κυκλοφορία, προσιτές τιμές.</p></div>
+    <div class="card"><div class="n">2</div><h3>Premium συσκευασία</h3><div class="ex">π.χ. λάμπες αυτοκινήτου</div><p>Τα προϊόντα ξεχωρίζουν στο ράφι και εμπνέουν εμπιστοσύνη. Περισσότερες αυθόρμητες αγορές.</p></div>
+    <div class="card"><div class="n">3</div><h3>Ανταγωνιστική τιμή</h3><div class="ex">π.χ. λάμπες H7, ακροδέκτες μπαταρίας</div><p>Καλά περιθώρια ακόμη και σε μικρές ποσότητες. Χαμηλή τιμή & υψηλή ζήτηση.</p></div>
+    <div class="card"><div class="n">4</div><h3>Γρήγορη κυκλοφορία</h3><div class="ex">π.χ. υαλοκαθαριστήρες</div><p>Σταθερή ζήτηση όλο τον χρόνο. Υγιές cashflow, χωρίς δεσμευμένα χρήματα.</p></div>
+    <div class="card"><div class="n">5</div><h3>Ελεγμένη ποιότητα</h3><div class="ex">ευρωπαϊκά πρότυπα</div><p>Λιγότερες επιστροφές και παράπονα. Χαμηλότερο κόστος, πιστοί πελάτες.</p></div>
+    <div class="card"><div class="n">6</div><h3>Διαφοροποιημένη γκάμα</h3><div class="ex">πολλές κατηγορίες</div><p>Γεμίζετε εύκολα τα ράφια. Μικρότερος εμπορικός κίνδυνος, πιο σταθερές πωλήσεις.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
   <h2>Δεν σας ζητάμε να μας πιστέψετε <span class="r">στα λόγια.</span> Σας δείχνουμε τα νούμερα.</h2>
-  <div class="stats" style="margin-top:24px">
+  <div class="stats" style="margin-top:22px">
     <div class="stat"><div class="v">2007</div><div class="l">ενεργή B2B πλατφόρμα από</div></div>
     <div class="stat"><div class="v">1000+</div><div class="l">προϊόντα στο portfolio</div></div>
     <div class="stat"><div class="v">3000</div><div class="l">ενεργοί συνεργάτες</div></div>
     <div class="stat"><div class="v">24–48ω</div><div class="l">παράδοση σε όλη τη χώρα</div></div>
   </div>
   <div class="facts">
-    <div class="fact"><span class="i">✓</span><div>Εγγύηση <b>2–3 χρόνια</b> (στους συναγερμούς: εγγύηση εφ' όρου ζωής)</div></div>
+    <div class="fact"><span class="i">✓</span><div>Εγγύηση <b>2–3 χρόνια</b> (στους συναγερμούς: εφ' όρου ζωής)</div></div>
     <div class="fact"><span class="i">✓</span><div>Πιστοποιητικά <b>ευρωπαϊκής συμμόρφωσης</b> — ασφάλεια & νομιμότητα στο ράφι</div></div>
-    <div class="fact"><span class="i">✓</span><div>Εθνική διανομή και αξιόπιστο logistics</div></div>
+    <div class="fact"><span class="i">✓</span><div>Εθνική διανομή & αξιόπιστο logistics</div></div>
     <div class="fact"><span class="i">✓</span><div>Αφοσιωμένος σύμβουλος πωλήσεων για κάθε συνεργάτη</div></div>
   </div>
-  <p class="sub" style="margin-top:26px">Συνεργασίες με:</p>
-  <div class="brands"><span>Carrefour</span><span>Auchan</span><span>Dedeman</span><span>eMAG</span><span>Autonet</span><span>Autototal</span><span>Materom</span></div>
+  <p class="sub" style="margin:28px 0 6px"><b style="color:#fff">Εθνική διανομή & συνεργασίες με:</b></p>
+  <div class="partners-grid">
+    <div class="pcard"><img src="assets/partners/carrefour.png" alt="Carrefour"><span>Carrefour</span></div>
+    <div class="pcard"><img src="assets/partners/auchan.png" alt="Auchan"><span>Auchan</span></div>
+    <div class="pcard"><img src="assets/partners/dedeman.png" alt="Dedeman"><span>Dedeman</span></div>
+    <div class="pcard"><img src="assets/partners/emag.png" alt="eMAG"><span>eMAG</span></div>
+    <div class="pcard"><img src="assets/partners/autonet.png" alt="Autonet"><span>Autonet</span></div>
+    <div class="pcard"><img src="assets/partners/autototal.png" alt="Autototal"><span>Autototal</span></div>
+    <div class="pcard"><img src="assets/partners/materom.png" alt="Materom"><span>Materom</span></div>
+  </div>
 </div></section>
 
-<section><div class="wrap">
+<section style="background:var(--bg2)"><div class="wrap">
   <h2>Κριτικές <span class="r">από Google</span></h2>
   <div class="reviews">
     <div class="rev"><div class="stars">★★★★★</div><p>Πολλά αξεσουάρ, λογικές τιμές και ακριβής, σωστή παράδοση. Άριστη επικοινωνία από τον σύμβουλο. Τα προϊόντα είναι ποιοτικά.</p><div class="who">Adi Expert Auto</div></div>
     <div class="rev"><div class="stars">★★★★★</div><p>Είναι μοναδικοί, εμπορεύονται μόνο ποιοτικά προϊόντα, 100% αφοσιωμένο προσωπικό, πραγματική εγγύηση σε όλα. Συνεργαζόμαστε πάνω από 10 χρόνια — τους προτείνω.</p><div class="who">Vasilescu Stelian</div></div>
-    <div class="rev"><div class="stars">★★★★★</div><p>Είμαι πολύ ικανοποιημένη από τα προϊόντα της Globiz. Έχουν τις καλύτερες τιμές και μεγάλη γκάμα. Ο σύμβουλος πωλήσεων με στηρίζει με σεβασμό. Την προτείνω!</p><div class="who">Maria Toșe</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>Πολύ ικανοποιημένη από τα προϊόντα της Globiz. Έχουν τις καλύτερες τιμές και μεγάλη γκάμα. Ο σύμβουλος με στηρίζει με σεβασμό. Την προτείνω!</p><div class="who">Maria Toșe</div></div>
   </div>
 </div></section>
 
-<section style="background:var(--bg2)"><div class="wrap faq">
+<section><div class="wrap faq">
   <h2>Συχνές <span class="r">ερωτήσεις</span></h2>
-  <details><summary>«Δεν θέλω να μου μείνει εμπόρευμα στο ράφι.»</summary><p>Έχετε πρόσβαση σε προϊόντα με σταθερή ζήτηση και λαμβάνετε προτάσεις από τον σύμβουλο, ώστε να παραγγέλνετε έξυπνα — όχι στην τύχη.</p></details>
+  <details><summary>«Δεν θέλω να μου μείνει εμπόρευμα στο ράφι.»</summary><p>Έχετε πρόσβαση σε προϊόντα με σταθερή ζήτηση και προτάσεις από τον σύμβουλο, ώστε να παραγγέλνετε έξυπνα.</p></details>
   <details><summary>«Με ενδιαφέρει η παράδοση. Τη θέλω γρήγορα.»</summary><p>Οι παραγγελίες φτάνουν σε μέγιστο 48 ώρες, σε όλη τη χώρα (συχνά και σε 24 ώρες).</p></details>
-  <details><summary>«Κι αν χαλάσει;»</summary><p>Εγγύηση 2–3 χρόνια για τη γκάμα auto/ηλεκτρικών/ηλεκτρονικών, με διαδικασία επισκευής/αντικατάστασης σε εγγύηση.</p></details>
-  <details><summary>«Είναι καλές οι τιμές; Ο ανταγωνισμός ρίχνει τιμές online.»</summary><p>Ανταγωνιστικές τιμές, διαφοροποιημένες ανά ποσότητα και με σταθερότητα 2–3 μηνών (ανάλογα με την πολιτική).</p></details>
-  <details><summary>«Είμαι νέος πελάτης. Πώς πληρώνω;»</summary><p>Για νέους πελάτες ισχύουν σαφείς όροι στην αρχή (πρώτες παραδόσεις προπληρωμή/αντικαταβολή), και στη συνέχεια πιστωτικά όρια ανάλογα με τον όγκο (30/45/60 ημέρες, βάσει συμβολαίου).</p></details>
-  <details><summary>«Δεν έχω χρόνο να κυνηγάω προμηθευτές.»</summary><p>Έχετε αφοσιωμένο σύμβουλο, άμεση απάντηση και B2B πλατφόρμα με πλήρη πληροφόρηση — παραγγέλνετε πιο γρήγορα, με λιγότερα τηλέφωνα.</p></details>
+  <details><summary>«Κι αν χαλάσει;»</summary><p>Εγγύηση 2–3 χρόνια, με διαδικασία επισκευής/αντικατάστασης σε εγγύηση.</p></details>
+  <details><summary>«Είναι καλές οι τιμές;»</summary><p>Ανταγωνιστικές τιμές, διαφοροποιημένες ανά ποσότητα και με σταθερότητα 2–3 μηνών.</p></details>
+  <details><summary>«Είμαι νέος πελάτης. Πώς πληρώνω;»</summary><p>Σαφείς όροι στην αρχή, και στη συνέχεια πιστωτικά όρια ανάλογα με τον όγκο (30/45/60 ημέρες).</p></details>
+  <details><summary>«Δεν έχω χρόνο να κυνηγάω προμηθευτές.»</summary><p>Αφοσιωμένος σύμβουλος, άμεση απάντηση και B2B πλατφόρμα — παραγγέλνετε πιο γρήγορα.</p></details>
 </div></section>
 
 <section><div class="wrap">
   <div class="cta">
-    <h2>Γίνετε <span class="r">συνεργάτης CARGUARD</span></h2>
-    <p class="sub" style="margin:8px auto 0">Εγγράψτε την εταιρεία σας (B2B) — σας καλούμε εμείς και ρυθμίζουμε τη συνεργασία.</p>
-    <div class="gift">🎁 Δώρο έκπληξη στην πρώτη σας παραγγελία — ανεξαρτήτως ποσού!</div><br>
-    <a class="btn" href="https://carguard.shop/user/registration" style="font-size:19px;padding:18px 40px">Εγγραφή τώρα →</a>
+    <div class="giftwrap">
+      <img class="giftimg" src="assets/gift.jpg" alt="Δώρο CARGUARD">
+      <div>
+        <h2>Γίνετε <span class="r">συνεργάτης CARGUARD</span></h2>
+        <p class="sub" style="margin:8px 0 0">Εγγράψτε την εταιρεία σας (B2B) — σας καλούμε εμείς και ρυθμίζουμε τη συνεργασία.</p>
+        <div class="gift">🎁 Δώρο έκπληξη στην πρώτη σας παραγγελία — ανεξαρτήτως ποσού!</div><br>
+        <a class="btn" href="https://carguard.shop/user/registration" style="font-size:19px;padding:18px 40px">Εγγραφή τώρα →</a>
+      </div>
+    </div>
   </div>
 </div></section>
 
