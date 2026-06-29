@@ -76,6 +76,11 @@ h2 .r{color:var(--red2)}
 footer{padding:34px 0;color:var(--mut);font-size:14px;text-align:center;border-top:1px solid var(--line)}
 footer b{color:#fff}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:32px}.grid{grid-template-columns:1fr}.prods{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}.partners-grid{grid-template-columns:repeat(3,1fr)}}
+.reassure{font-size:13px;color:var(--mut);margin-top:10px;text-align:center}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;background:rgba(11,11,13,.96);border-top:1px solid var(--line);padding:10px 14px;display:none;backdrop-filter:blur(6px)}
+.sticky-cta a{display:block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:14px;border-radius:10px;font-size:16px;text-align:center}
+.sticky-cta small{display:block;color:var(--mut);font-size:12px;margin-top:6px;text-align:center}
+@media(max-width:760px){.sticky-cta{display:block}body{padding-bottom:88px}}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -86,17 +91,17 @@ fbq('init','1344314721133063');fbq('track','PageView');
 <!-- End Meta Pixel Code -->
 </head>
 <body>
-<header><div class="wrap"><img src="assets/logo.png" alt="CARGUARD®"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή B2B</a></div></header>
+<header><div class="wrap"><img src="assets/logo.png" alt="CARGUARD®"><a class="btn" href="https://carguard.shop/user/registration">Τιμές χονδρικής →</a></div></header>
 
 <section class="hero"><div class="wrap">
   <div>
     <div class="kick">ο αγαπημένος σας B2B συνεργάτης</div>
     <h1>Αξεσουάρ αυτοκινήτου που φέρνουν <span style="color:var(--red2)">κέρδος</span> — όχι σκόνη στο ράφι.</h1>
     <p class="lead">Έχετε κατάστημα ή συνεργείο αυτοκινήτων ή εταιρεία διανομής και θέλετε εμπόρευμα που <b>κινείται</b>; Γίνετε συνεργάτης της CARGUARD®.</p>
-    <a class="btn" href="https://carguard.shop/user/registration">Εγγραφή εταιρείας (B2B) →</a>
+    <a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a><div class="reassure">✓ Δωρεάν εγγραφή · 2 λεπτά · Σας καλούμε εμείς</div>
   </div>
   <div class="portrait"><img src="assets/logo.png" alt="CARGUARD®" style="position:absolute;top:16px;left:16px;height:26px;width:auto;filter:drop-shadow(0 2px 5px rgba(0,0,0,.95));z-index:3"><img src="assets/hajni.jpg" alt="CARGUARD® - ο συνεργάτης σας"><div class="tag"><small>CARGUARD® · Globiz Group</small>Ο συνεργάτης σας για ποιοτικά αξεσουάρ αυτοκινήτου</div></div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή τώρα →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
 
 <section><div class="wrap">
   <h2>Ξέρουμε <span class="r">πώς είναι…</span></h2>
@@ -105,7 +110,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
     Και τότε πέφτουν και τα υπόλοιπα: έλεγχοι, χαρτιά, πιστοποιητικά, μεταφράσεις, εγκρίσεις… και πρέπει να είστε εντάξει με όλα — χωρίς να κλείσετε το μαγαζί.<br><br>
     Και στο τέλος του μήνα: φόροι, μισθοί, ενοίκια, λογαριασμοί. Δουλεύετε από το πρωί ως το βράδυ και καμιά φορά μένετε χωρίς ρευστό ακριβώς όταν το χρειάζεστε πιο πολύ.
   </div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή τώρα →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
 
 <section style="background:var(--bg2)"><div class="wrap">
   <h2>Γι' αυτό υπάρχει η <span class="r">CARGUARD®</span></h2>
@@ -113,7 +118,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
   <div class="chips"><span class="chip">εξαιρετικά προϊόντα</span><span class="chip">χαμηλές τιμές</span><span class="chip">απόθεμα</span><span class="chip">υποστήριξη</span></div>
   <p class="sub" style="margin:6px 0 12px">+ ποιοτική συσκευασία και μοναδικό, ελκυστικό design</p>
   <div class="chips"><span class="chip">πιστοποιητικά</span><span class="chip">μεταφράσεις</span><span class="chip">εγκρίσεις</span><span class="chip">εγγυήσεις</span></div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή τώρα →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
 
 <section><div class="wrap">
   <h2>Τα <span class="r">προϊόντα</span> μας</h2>
@@ -126,7 +131,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
     <figure><img src="assets/prod/halh4.jpg" alt="Λάμπες αλογόνου H4"><figcaption>Αλογόνου H4</figcaption></figure>
   </div>
   <div class="range"><img src="assets/range.jpg" alt="Πλήρης γκάμα αξεσουάρ CARGUARD®"></div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή τώρα →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
 
 <section style="background:var(--bg2)"><div class="wrap">
   <h2>ΟΦΕΛΗ <span class="r">για το κατάστημά σας</span></h2>
@@ -139,7 +144,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
     <div class="card"><div class="n">5</div><h3>Ελεγμένη ποιότητα</h3><div class="ex">ευρωπαϊκά πρότυπα</div><p>Λιγότερες επιστροφές και παράπονα. Χαμηλότερο κόστος, πιστοί πελάτες.</p></div>
     <div class="card"><div class="n">6</div><h3>Διαφοροποιημένη γκάμα</h3><div class="ex">πολλές κατηγορίες</div><p>Γεμίζετε εύκολα τα ράφια. Μικρότερος εμπορικός κίνδυνος, πιο σταθερές πωλήσεις.</p></div>
   </div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή τώρα →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
 
 <section><div class="wrap">
   <h2>Δεν σας ζητάμε να μας πιστέψετε <span class="r">στα λόγια.</span> Σας δείχνουμε τα νούμερα.</h2>
@@ -165,7 +170,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
     <div class="pcard"><img src="assets/partners/autototal.png" alt="Autototal"><span>Autototal</span></div>
     <div class="pcard"><img src="assets/partners/materom.png" alt="Materom"><span>Materom</span></div>
   </div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή τώρα →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
 
 <section style="background:var(--bg2)"><div class="wrap">
   <h2>Κριτικές <span class="r">από Google</span></h2>
@@ -174,7 +179,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
     <div class="rev"><div class="stars">★★★★★</div><p>Είναι μοναδικοί, εμπορεύονται μόνο ποιοτικά προϊόντα, 100% αφοσιωμένο προσωπικό, πραγματική εγγύηση σε όλα. Συνεργαζόμαστε πάνω από 10 χρόνια — τους προτείνω.</p><div class="who">Vasilescu Stelian</div></div>
     <div class="rev"><div class="stars">★★★★★</div><p>Πολύ ικανοποιημένη από τα προϊόντα της Globiz. Έχουν τις καλύτερες τιμές και μεγάλη γκάμα. Ο σύμβουλος με στηρίζει με σεβασμό. Την προτείνω!</p><div class="who">Maria Toșe</div></div>
   </div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή τώρα →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
 
 <section><div class="wrap faq">
   <h2>Συχνές <span class="r">ερωτήσεις</span></h2>
@@ -184,7 +189,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
   <details><summary>«Είναι καλές οι τιμές;»</summary><p>Ανταγωνιστικές τιμές, διαφοροποιημένες ανά ποσότητα και με σταθερότητα 2–3 μηνών.</p></details>
   <details><summary>«Είμαι νέος πελάτης. Πώς πληρώνω;»</summary><p>Σαφείς όροι στην αρχή, και στη συνέχεια πιστωτικά όρια ανάλογα με τον όγκο (30/45/60 ημέρες).</p></details>
   <details><summary>«Δεν έχω χρόνο να κυνηγάω προμηθευτές.»</summary><p>Αφοσιωμένος σύμβουλος, άμεση απάντηση και B2B πλατφόρμα — παραγγέλνετε πιο γρήγορα.</p></details>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφή τώρα →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
 
 <section><div class="wrap">
   <div class="cta">
@@ -194,7 +199,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
         <img src="assets/logo.png" alt="CARGUARD®" style="height:46px;margin:0 auto 14px;display:block"><h2>Γίνετε <span class="r">συνεργάτης</span> μας</h2>
         <p class="sub" style="margin:8px 0 0">Εγγράψτε την εταιρεία σας (B2B) — σας καλούμε εμείς και ρυθμίζουμε τη συνεργασία.</p>
         <div class="gift">🎁 Δώρο έκπληξη στην πρώτη σας παραγγελία — ανεξαρτήτως ποσού!</div><br>
-        <a class="btn" href="https://carguard.shop/user/registration" style="font-size:19px;padding:18px 40px">Εγγραφή τώρα →</a>
+        <a class="btn" href="https://carguard.shop/user/registration" style="font-size:19px;padding:18px 40px">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a>
       </div>
     </div>
   </div>
@@ -202,5 +207,5 @@ fbq('init','1344314721133063');fbq('track','PageView');
 
 <footer><div class="wrap"><b>CARGUARD®</b> · Globiz Group · carguard.shop · globiz.ro<br>Αξεσουάρ αυτοκινήτου χονδρικής (B2B) — ποιότητα, εγγύηση, απευθείας από τον κατασκευαστή.</div></footer>
 <script>document.addEventListener('click',function(e){var a=e.target.closest('a.btn');if(a&&window.fbq){fbq('track','Lead');}});</script>
-</body>
+<div class="sticky-cta"><a class="btn" href="https://carguard.shop/user/registration">Εγγραφείτε — τιμές χονδρικής →</a><small>Δωρεάν · 2 λεπτά · Σας καλούμε εμείς</small></div></body>
 </html>
