@@ -14,6 +14,7 @@ img{max-width:100%;display:block}
 .btn{display:inline-block;background:var(--red);color:#fff;font-weight:800;text-decoration:none;padding:16px 30px;border-radius:12px;font-size:17px;box-shadow:0 8px 24px rgba(225,18,29,.35);transition:.15s}
 .btn:hover{background:#ff1f2b;transform:translateY(-2px)}
 header{position:sticky;top:0;z-index:50;background:rgba(11,11,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+#inscriere{scroll-margin-top:90px}
 header .wrap{display:flex;align-items:center;gap:16px;padding:12px 20px}
 header img{height:30px}
 header .btn{margin-left:auto;padding:11px 20px;font-size:14px}
@@ -75,7 +76,7 @@ h2 .r{color:var(--red2)}
 .gift{display:inline-block;margin:14px 0 20px;background:#1c1c20;border:1px dashed var(--red);border-radius:999px;padding:10px 20px;font-weight:700}
 footer{padding:34px 0;color:var(--mut);font-size:14px;text-align:center;border-top:1px solid var(--line)}
 footer b{color:#fff}
-@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:32px}.grid{grid-template-columns:1fr}.prods{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}.partners-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:32px}.grid{grid-template-columns:1fr}.prods{grid-template-columns:repeat(3,1fr);gap:8px}.prods img{height:auto;aspect-ratio:1/1}.prods figure{padding:7px}.prods figcaption{font-size:11px;margin-top:6px}.stats{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}.partners-grid{grid-template-columns:repeat(3,1fr)}}
 .reassure{font-size:13px;color:var(--mut);margin-top:10px;text-align:center}
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;background:rgba(11,11,13,.96);border-top:1px solid var(--line);padding:10px 14px;display:none;backdrop-filter:blur(6px)}
 .sticky-cta a{display:block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:14px;border-radius:10px;font-size:16px;text-align:center}
@@ -103,10 +104,10 @@ fbq('init','1344314721133063');fbq('track','PageView');
     <div class="kick">ο B2B συνεργάτης σας</div>
     <h1>Αξεσουάρ αυτοκινήτου που φέρνουν <span style="color:var(--red2)">κέρδος</span> — όχι σκόνη στο ράφι.</h1>
     <p class="lead">Έχετε κατάστημα ή συνεργείο αυτοκινήτων ή εταιρεία διανομής και θέλετε εμπόρευμα που <b>κινείται</b>; Γίνετε συνεργάτης της CARGUARD®.</p>
-    <a class="btn" href="#inscriere">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a><div class="reassure">✓ Δωρεάν εγγραφή · 2 λεπτά · Πρόσβαση στις τιμές χονδρικής</div>
+    <span id="inscriere"></span><form id="leadform" class="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:14px;text-align:left;max-width:440px"><div class="frow"><input name="Onoma" placeholder="Όνομα *" required><input name="Etaireia" placeholder="Εταιρεία *" required></div><input name="Tilefono" type="tel" placeholder="Τηλέφωνο *" required style="margin-top:8px"><input type="hidden" name="_subject" value="Nea eggrafi B2B Grecia (landing)"><label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;color:var(--mut);margin:8px 0 12px;line-height:1.4"><input type="checkbox" name="Synainesi_GDPR" value="Nai" required style="width:auto;margin-top:3px;flex:0 0 auto"><span>Συμφωνώ να επικοινωνήσει μαζί μου η CARGUARD® (τηλέφωνο, email, WhatsApp) για τη B2B συνεργασία. <a href="https://carguard.shop/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Απόρρητο</a></span></label><button type="submit" class="btn" style="width:100%;border:0;cursor:pointer;font-size:16px">Στείλτε τα στοιχεία σας →</button><div class="reassure">✓ Δωρεάν · 2 λεπτά · Σας καλούμε εντός 24ω</div></form><div id="leadok" class="leadok" style="display:none;padding:14px 0"><div style="font-size:38px">✅</div><h3 style="font-size:20px;margin:6px 0">Ευχαριστούμε!</h3><p class="lead">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
   </div>
   <div class="portrait"><img src="assets/logo.png" alt="CARGUARD®" style="position:absolute;top:16px;left:16px;height:26px;width:auto;filter:drop-shadow(0 2px 5px rgba(0,0,0,.95));z-index:3"><img src="assets/hajni.jpg" alt="CARGUARD® - ο συνεργάτης σας"><div class="tag"><small>CARGUARD® · Globiz Group</small>Ο συνεργάτης σας για ποιοτικά αξεσουάρ αυτοκινήτου</div></div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
+</div></section>
 
 <section><div class="wrap">
   <h2>Ξέρουμε <span class="r">πώς είναι…</span></h2>
@@ -191,14 +192,14 @@ fbq('init','1344314721133063');fbq('track','PageView');
 </div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Εγγραφείτε για πρόσβαση στις τιμές χονδρικής →</a></div></section>
 
 <section><div class="wrap">
-  <div class="cta" id="inscriere">
+  <div class="cta">
     <div class="giftwrap">
       <img class="giftimg" src="assets/gift.jpg" alt="Δώρο CARGUARD®">
       <div>
         <img src="assets/logo.png" alt="CARGUARD®" style="height:46px;margin:0 auto 14px;display:block"><h2>Γίνετε <span class="r">συνεργάτης</span> μας</h2>
         <p class="sub" style="margin:8px 0 0">Εγγραφείτε δωρεάν στην B2B πλατφόρμα μας και αποκτήστε πρόσβαση στις τιμές χονδρικής και σε ολόκληρη τη γκάμα προϊόντων.</p>
         <div class="gift">🎁 Δώρο έκπληξη στην πρώτη σας παραγγελία — ανεξαρτήτως ποσού!</div><br>
-        <form id="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:8px;text-align:left;max-width:460px;margin-left:auto;margin-right:auto">
+        <form class="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:8px;text-align:left;max-width:440px;margin-left:auto;margin-right:auto">
   <div class="frow"><input name="Onoma" placeholder="Όνομα *" required><input name="Etaireia" placeholder="Εταιρεία *" required></div>
   <div class="frow"><input name="Tilefono" type="tel" placeholder="Τηλέφωνο *" required><input name="Poli" placeholder="Πόλη"></div>
   <input name="Email" type="email" placeholder="Email *" required>
@@ -210,7 +211,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
   <button type="submit" class="btn" style="width:100%;border:0;cursor:pointer;font-size:17px">Στείλτε τα στοιχεία σας →</button>
   <div class="reassure">✓ Δωρεάν · 2 λεπτά · Επικοινωνούμε μαζί σας για να ολοκληρώσετε την εγγραφή</div>
 </form>
-<div id="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">✅</div><h3 style="font-size:22px;margin:8px 0">Ευχαριστούμε!</h3><p class="sub">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
+<div class="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">✅</div><h3 style="font-size:22px;margin:8px 0">Ευχαριστούμε!</h3><p class="sub">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
 <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--line)">
   <p class="sub" style="font-size:14px;margin:0 0 12px">Ξέρετε ήδη ότι θέλετε να γίνετε συνεργάτης;</p>
   <a href="https://carguard.shop/user/registration?ref=landing_gr" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Εγγραφείτε απευθείας στην πλατφόρμα →</a>
@@ -222,6 +223,6 @@ fbq('init','1344314721133063');fbq('track','PageView');
 </div></section>
 
 <footer><div class="wrap"><b>CARGUARD®</b> · Globiz Group · carguard.shop · globiz.ro<br>Αξεσουάρ αυτοκινήτου χονδρικής (B2B) — ποιότητα, εγγύηση, απευθείας από τον κατασκευαστή.</div></footer>
-<script>(function(){var lf=document.getElementById("leadform");if(lf){lf.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(lf);fetch(lf.action,{method:"POST",body:d,headers:{"Accept":"application/json"}}).then(function(r){if(r.ok){lf.style.display="none";document.getElementById("leadok").style.display="block";if(window.fbq)fbq("track","Lead");}else{alert("Σφάλμα. Δοκιμάστε ξανά ή καλέστε μας.");}}).catch(function(){alert("Σφάλμα δικτύου. Δοκιμάστε ξανά.");});});}var reg=document.querySelectorAll('a[href*="carguard.shop/user/registration"]');for(var i=0;i<reg.length;i++){reg[i].addEventListener("click",function(){if(window.fbq)fbq("track","Lead");});}})();</script>
+<script>(function(){document.querySelectorAll("form.leadform").forEach(function(lf){lf.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(lf);fetch(lf.action,{method:"POST",body:d,headers:{"Accept":"application/json"}}).then(function(r){if(r.ok){lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";if(window.fbq)fbq("track","Lead");}else{alert("Σφάλμα. Δοκιμάστε ξανά ή καλέστε μας.");}}).catch(function(){alert("Σφάλμα δικτύου. Δοκιμάστε ξανά.");});});});var reg=document.querySelectorAll("a[href*=\"carguard.shop/user/registration\"]");for(var i=0;i<reg.length;i++){reg[i].addEventListener("click",function(){if(window.fbq)fbq("track","Lead");});}})();</script>
 <div class="sticky-cta"><a class="btn" href="#inscriere">Εγγραφείτε — τιμές χονδρικής →</a><small>Δωρεάν · 2 λεπτά · Πρόσβαση στις τιμές χονδρικής</small></div></body>
 </html>
