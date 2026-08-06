@@ -104,7 +104,6 @@ fbq('init','1344314721133063');fbq('track','PageView');
   <img src="assets/logo.png" alt="CARGUARD®">
   <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
     <div class="langsw"><button type="button" data-lang-btn="el">ΕΛ</button><button type="button" data-lang-btn="en">EN</button></div>
-    <a class="btn" data-i18n="nav_register" href="https://carguard.shop/user/registration" target="_blank" rel="noopener">Εγγραφή →</a>
   </div>
 </div></header>
 
@@ -229,7 +228,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
 <div class="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">✅</div><h3 style="font-size:22px;margin:8px 0" data-i18n="thank_title">Ευχαριστούμε!</h3><p class="sub" data-i18n="thank_body">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
 <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--line)">
   <p class="sub" style="font-size:14px;margin:0 0 12px" data-i18n="already_know">Ξέρετε ήδη ότι θέλετε να γίνετε συνεργάτης;</p>
-  <a href="https://carguard.shop/user/registration?ref=landing_gr" target="_blank" rel="noopener" data-i18n="register_direct" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Εγγραφείτε απευθείας στην πλατφόρμα →</a>
+  <a href="#inscriere" data-i18n="register_direct" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Συμπληρώστε τη φόρμα εγγραφής →</a>
 </div>
 
       </div>
@@ -242,7 +241,6 @@ fbq('init','1344314721133063');fbq('track','PageView');
 var I18N = {
   el: {
     __title: "CARGUARD® — B2B αξεσουάρ αυτοκινήτου | Γίνε συνεργάτης",
-    nav_register: "Εγγραφή →",
     kicker: "ο B2B συνεργάτης σας",
     h1: 'Αξεσουάρ αυτοκινήτου που φέρνουν <span style="color:var(--red2)">κέρδος</span> — όχι σκόνη στο ράφι.',
     lead: "Έχετε κατάστημα ή συνεργείο αυτοκινήτων ή εταιρεία διανομής και θέλετε εμπόρευμα που <b>κινείται</b>; Γίνετε συνεργάτης της CARGUARD®.",
@@ -293,14 +291,13 @@ var I18N = {
     cta_sub: "Εγγραφείτε δωρεάν στην B2B πλατφόρμα μας και αποκτήστε πρόσβαση στις τιμές χονδρικής και σε ολόκληρη τη γκάμα προϊόντων.",
     gift: "🎁 Δώρο έκπληξη στην πρώτη σας παραγγελία — ανεξαρτήτως ποσού!",
     already_know: "Ξέρετε ήδη ότι θέλετε να γίνετε συνεργάτης;",
-    register_direct: "Εγγραφείτε απευθείας στην πλατφόρμα →",
+    register_direct: "Συμπληρώστε τη φόρμα εγγραφής →",
     footer_line: "Αξεσουάρ αυτοκινήτου χονδρικής (B2B) — ποιότητα, εγγύηση, απευθείας από τον κατασκευαστή.",
     sticky_small: "Δωρεάν · 2 λεπτά · Πρόσβαση στις τιμές χονδρικής",
     vat_checking: "Έλεγχος…", vat_valid: "✓ Έγκυρο ΑΦΜ", vat_invalid: "Δεν επιβεβαιώθηκε", vat_error: "Σφάλμα δικτύου"
   },
   en: {
     __title: "CARGUARD® — B2B Car Accessories | Become a Partner",
-    nav_register: "Register →",
     kicker: "Your B2B Partner",
     h1: 'Car accessories that bring <span style="color:var(--red2)">profit</span> — not dust on the shelf.',
     lead: "Do you run a shop, a car service, or a distribution company, and want stock that <b>actually moves</b>? Become a CARGUARD® partner.",
@@ -351,7 +348,7 @@ var I18N = {
     cta_sub: "Sign up for free on our B2B platform and get access to wholesale prices and our full product range.",
     gift: "🎁 Surprise gift on your first order — no matter the amount!",
     already_know: "Already know you want to become a partner?",
-    register_direct: "Register directly on the platform →",
+    register_direct: "Fill in the registration form →",
     footer_line: "Wholesale car accessories (B2B) — quality, warranty, straight from the manufacturer.",
     sticky_small: "Free · 2 minutes · Access wholesale prices",
     vat_checking: "Checking…", vat_valid: "✓ Valid VAT", vat_invalid: "Not verified", vat_error: "Network error"
@@ -399,7 +396,6 @@ document.querySelectorAll("[data-lang-btn]").forEach(function(btn){
       else{lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";}
     }).catch(function(){lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";});
   });});
-  var reg=document.querySelectorAll("a[href*=\"carguard.shop/user/registration\"]");for(var i=0;i<reg.length;i++){reg[i].addEventListener("click",function(){if(window.fbq)fbq("track","Lead");});}
 function cgCheckVatGr(vatInput,companyInput,cityInput,status){var val=vatInput.value.trim();if(!val)return;var L=I18N[window.CG_LANG]||I18N.el;status.textContent=L.vat_checking;status.style.color="#a7a7ad";fetch("https://178-105-10-138.sslip.io/api/vat/validate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({vatNumber:val,country:"EL"})}).then(function(r){return r.json();}).then(function(j){if(j.status==="valid"){status.textContent=L.vat_valid;status.style.color="#22C55E";if(companyInput&&!companyInput.value&&j.companyName)companyInput.value=j.companyName;if(cityInput&&!cityInput.value&&j.companyAddress)cityInput.value=j.companyAddress;}else{status.textContent=L.vat_invalid;status.style.color="#ff5959";}}).catch(function(){status.textContent=L.vat_error;status.style.color="#ff5959";});}
 document.querySelectorAll('[name="AFM"]').forEach(function(vatInput){var form=vatInput.closest("form");var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=form.querySelector(".vatstatus");vatInput.addEventListener("blur",function(){cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
 document.querySelectorAll(".vatcheck-btn").forEach(function(btn){btn.addEventListener("click",function(e){e.preventDefault();var form=btn.closest("form");var vatInput=form.querySelector('[name="AFM"]');var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=btn.parentNode.querySelector(".vatstatus");cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
