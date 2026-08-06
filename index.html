@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="el">
+<html lang="el" id="htmlRoot">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CARGUARD® — B2B αξεσουάρ αυτοκινήτου | Γίνε συνεργάτης</title>
+<title id="pageTitle">CARGUARD® — B2B αξεσουάρ αυτοκινήτου | Γίνε συνεργάτης</title>
 <meta name="description" content="Αξεσουάρ αυτοκινήτου που φέρνουν κέρδος. Γίνε B2B συνεργάτης της CARGUARD®: ποιοτικά προϊόντα, χαμηλές τιμές, απόθεμα, εγγύηση, γρήγορη παράδοση.">
 <style>
 :root{--red:#e1121d;--red2:#ff2b2b;--bg:#0b0b0d;--bg2:#141417;--line:#26262b;--tx:#f3f3f5;--mut:#a7a7ad}
@@ -17,7 +17,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(11,11,13,.92);backdrop-f
 #inscriere{scroll-margin-top:90px}
 header .wrap{display:flex;align-items:center;gap:16px;padding:12px 20px}
 header img{height:30px}
-header .btn{margin-left:auto;padding:11px 20px;font-size:14px}
+header .btn{padding:11px 20px;font-size:14px}
+.langsw{display:flex;gap:6px}
+.langsw button{background:#1c1c20;border:1px solid var(--line);color:var(--mut);font-weight:800;font-size:12.5px;padding:7px 12px;border-radius:8px;cursor:pointer;font-family:inherit}
+.langsw button.active{background:var(--red);color:#fff;border-color:var(--red)}
 .hero{padding:60px 0 52px;background:radial-gradient(900px 500px at 70% -10%,rgba(225,18,29,.25),transparent 60%),linear-gradient(180deg,#141417,#0b0b0d)}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .kick{color:var(--red2);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:13px;margin-bottom:14px}
@@ -97,76 +100,82 @@ fbq('init','1344314721133063');fbq('track','PageView');
 <!-- End Meta Pixel Code -->
 </head>
 <body>
-<header><div class="wrap"><img src="assets/logo.png" alt="CARGUARD®"><a class="btn" href="https://carguard.shop/user/registration" target="_blank" rel="noopener">Εγγραφή →</a></div></header>
+<header><div class="wrap">
+  <img src="assets/logo.png" alt="CARGUARD®">
+  <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+    <div class="langsw"><button type="button" data-lang-btn="el">ΕΛ</button><button type="button" data-lang-btn="en">EN</button></div>
+    <a class="btn" data-i18n="nav_register" href="https://carguard.shop/user/registration" target="_blank" rel="noopener">Εγγραφή →</a>
+  </div>
+</div></header>
 
 <section class="hero"><div class="wrap">
   <div>
-    <div class="kick">ο B2B συνεργάτης σας</div>
-    <h1>Αξεσουάρ αυτοκινήτου που φέρνουν <span style="color:var(--red2)">κέρδος</span> — όχι σκόνη στο ράφι.</h1>
-    <p class="lead">Έχετε κατάστημα ή συνεργείο αυτοκινήτων ή εταιρεία διανομής και θέλετε εμπόρευμα που <b>κινείται</b>; Γίνετε συνεργάτης της CARGUARD®.</p>
-    <span id="inscriere"></span><form id="leadform" class="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:14px;text-align:left;max-width:440px"><div style="margin-bottom:8px"><input name="AFM" placeholder="ΑΦΜ / Ενδοκοινοτικό VAT (π.χ. EL123456789) *" required style="margin-bottom:4px"><div style="display:flex;align-items:center;gap:8px;margin-top:2px"><button type="button" class="vatcheck-btn" style="background:#1c1c20;border:1px solid var(--line);color:var(--tx);padding:7px 12px;border-radius:8px;font-size:12.5px;cursor:pointer">Έλεγχος ΑΦΜ</button><span class="vatstatus" style="font-size:12px;color:var(--mut)"></span></div></div><div class="frow"><input name="Onoma" placeholder="Όνομα *" required><input name="Etaireia" placeholder="Εταιρεία *" required></div><div class="frow"><input name="Tilefono" type="tel" placeholder="Τηλέφωνο *" required><input name="Poli" placeholder="Πόλη *" required></div><input name="Email" type="email" placeholder="Email *" required style="margin-top:8px"><input type="hidden" name="_subject" value="Nea eggrafi B2B Grecia (landing)"><input type="hidden" name="_cc" value="iosif.budai@globiz.ro"><label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;color:var(--mut);margin:8px 0 12px;line-height:1.4"><input type="checkbox" name="Synainesi_GDPR" value="Nai" required style="width:auto;margin-top:3px;flex:0 0 auto"><span>Συμφωνώ να επικοινωνήσει μαζί μου η CARGUARD® (τηλέφωνο, email ή WhatsApp) σχετικά με τη συνεργασία χονδρικής B2B. Δείτε την <a href="https://carguard.shop/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Πολιτική Απορρήτου</a> και τους <a href="https://carguard.shop/terms_and_conditions" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Όρους Χρήσης</a>.</span></label><button type="submit" class="btn" style="width:100%;border:0;cursor:pointer;font-size:16px">Στείλτε τα στοιχεία σας →</button><div class="reassure">✓ Δωρεάν · 2 λεπτά · Σας καλούμε εντός 24ω</div></form><div id="leadok" class="leadok" style="display:none;padding:14px 0"><div style="font-size:38px">✅</div><h3 style="font-size:20px;margin:6px 0">Ευχαριστούμε!</h3><p class="lead">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
+    <div class="kick" data-i18n="kicker">ο B2B συνεργάτης σας</div>
+    <h1 data-i18n="h1">Αξεσουάρ αυτοκινήτου που φέρνουν <span style="color:var(--red2)">κέρδος</span> — όχι σκόνη στο ράφι.</h1>
+    <p class="lead" data-i18n="lead">Έχετε κατάστημα ή συνεργείο αυτοκινήτων ή εταιρεία διανομής και θέλετε εμπόρευμα που <b>κινείται</b>; Γίνετε συνεργάτης της CARGUARD®.</p>
+    <span id="inscriere"></span><form id="leadform" class="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:14px;text-align:left;max-width:440px"><div style="margin-bottom:8px"><input name="AFM" data-i18n-ph="ph_vat" placeholder="ΑΦΜ / Ενδοκοινοτικό VAT (π.χ. EL123456789) *" required style="margin-bottom:4px"><div style="display:flex;align-items:center;gap:8px;margin-top:2px"><button type="button" class="vatcheck-btn" data-i18n="vatcheck_btn" style="background:#1c1c20;border:1px solid var(--line);color:var(--tx);padding:7px 12px;border-radius:8px;font-size:12.5px;cursor:pointer">Έλεγχος ΑΦΜ</button><span class="vatstatus" style="font-size:12px;color:var(--mut)"></span></div></div><div class="frow"><input name="Onoma" data-i18n-ph="ph_name" placeholder="Όνομα *" required><input name="Etaireia" data-i18n-ph="ph_company" placeholder="Εταιρεία *" required></div><div class="frow"><input name="Tilefono" type="tel" data-i18n-ph="ph_phone" placeholder="Τηλέφωνο *" required><input name="Poli" data-i18n-ph="ph_city" placeholder="Πόλη *" required></div><input name="Email" type="email" data-i18n-ph="ph_email" placeholder="Email *" required style="margin-top:8px"><input type="hidden" name="_subject" value="Nea eggrafi B2B Grecia (landing)"><input type="hidden" name="_cc" value="iosif.budai@globiz.ro"><label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;color:var(--mut);margin:8px 0 12px;line-height:1.4"><input type="checkbox" name="Synainesi_GDPR" value="Nai" required style="width:auto;margin-top:3px;flex:0 0 auto"><span data-i18n="gdpr_label">Συμφωνώ να επικοινωνήσει μαζί μου η CARGUARD® (τηλέφωνο, email ή WhatsApp) σχετικά με τη συνεργασία χονδρικής B2B. Δείτε την <a href="https://carguard.shop/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Πολιτική Απορρήτου</a> και τους <a href="https://carguard.shop/terms_and_conditions" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Όρους Χρήσης</a>.</span></label><button type="submit" class="btn" data-i18n="submit_btn" style="width:100%;border:0;cursor:pointer;font-size:16px">Στείλτε τα στοιχεία σας →</button><div class="reassure" data-i18n="reassure_hero">✓ Δωρεάν · 2 λεπτά · Σας καλούμε εντός 24ω</div></form><div id="leadok" class="leadok" style="display:none;padding:14px 0"><div style="font-size:38px">✅</div><h3 style="font-size:20px;margin:6px 0" data-i18n="thank_title">Ευχαριστούμε!</h3><p class="lead" data-i18n="thank_body">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
   </div>
-  <div class="portrait"><img src="assets/logo.png" alt="CARGUARD®" style="position:absolute;top:16px;left:16px;height:26px;width:auto;filter:drop-shadow(0 2px 5px rgba(0,0,0,.95));z-index:3"><img src="assets/hajni.jpg" alt="CARGUARD® - ο συνεργάτης σας"><div class="tag"><small>CARGUARD® · Globiz Group</small>Ο συνεργάτης σας για ποιοτικά αξεσουάρ αυτοκινήτου</div></div>
+  <div class="portrait"><img src="assets/logo.png" alt="CARGUARD®" style="position:absolute;top:16px;left:16px;height:26px;width:auto;filter:drop-shadow(0 2px 5px rgba(0,0,0,.95));z-index:3"><img src="assets/hajni.jpg" alt="CARGUARD® - ο συνεργάτης σας"><div class="tag"><small>CARGUARD® · Globiz Group</small><span data-i18n="portrait_tag">Ο συνεργάτης σας για ποιοτικά αξεσουάρ αυτοκινήτου</span></div></div>
 </div></section>
 
 <section style="background:var(--bg2)"><div class="wrap" style="text-align:center">
-  <h2>Η ιστορία <span class="r">CARGUARD®</span></h2>
-  <p class="sub" style="margin:0 auto 20px">Από ένα απλό πάθος, σε μια ευρωπαϊκή μάρκα.</p>
+  <h2 data-i18n="story_h2">Η ιστορία <span class="r">CARGUARD®</span></h2>
+  <p class="sub" style="margin:0 auto 20px" data-i18n="story_sub">Από ένα απλό πάθος, σε μια ευρωπαϊκή μάρκα.</p>
   <video src="assets/povestea-carguard-en-gr.mp4" autoplay muted playsinline controls loop style="width:100%;max-width:340px;border-radius:16px;margin:0 auto;display:block;border:1px solid var(--line);background:#000"></video>
 </div></section>
 
 <section><div class="wrap">
-  <h2>Ξέρουμε <span class="r">πώς είναι…</span></h2>
-  <div class="pain">
+  <h2 data-i18n="pain_h2">Ξέρουμε <span class="r">πώς είναι…</span></h2>
+  <div class="pain" data-i18n="pain_body">
     Μπαίνει ένας και λέει: <b>«Πιο φθηνά, αφεντικό… το βρήκα online.»</b> Έρχεται άλλος με το προϊόν στο χέρι: <b>«Άλλαξέ το με την εγγύηση, τώρα.»</b><br><br>
     Και τότε πέφτουν και τα υπόλοιπα: έλεγχοι, χαρτιά, πιστοποιητικά, μεταφράσεις, εγκρίσεις… και πρέπει να είστε εντάξει με όλα — χωρίς να κλείσετε το μαγαζί.<br><br>
     Και στο τέλος του μήνα: φόροι, μισθοί, ενοίκια, λογαριασμοί. Δουλεύετε από το πρωί ως το βράδυ και καμιά φορά μένετε χωρίς ρευστό ακριβώς όταν το χρειάζεστε πιο πολύ.
   </div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
 
 <section style="background:var(--bg2)"><div class="wrap">
-  <h2>Γι' αυτό υπάρχει η <span class="r">CARGUARD®</span></h2>
-  <p class="sub">Για να έχετε έναν συνεργάτη που μπορείτε να εμπιστευτείτε ακόμη και σε περιόδους κρίσης:</p>
-  <div class="chips"><span class="chip">εξαιρετικά προϊόντα</span><span class="chip">χαμηλές τιμές</span><span class="chip">απόθεμα</span><span class="chip">υποστήριξη</span></div>
-  <p class="sub" style="margin:6px 0 12px">+ ποιοτική συσκευασία και μοναδικό, ελκυστικό design</p>
-  <div class="chips"><span class="chip">πιστοποιητικά</span><span class="chip">μεταφράσεις</span><span class="chip">εγκρίσεις</span><span class="chip">εγγυήσεις</span></div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
+  <h2 data-i18n="why_h2">Γι' αυτό υπάρχει η <span class="r">CARGUARD®</span></h2>
+  <p class="sub" data-i18n="why_sub">Για να έχετε έναν συνεργάτη που μπορείτε να εμπιστευτείτε ακόμη και σε περιόδους κρίσης:</p>
+  <div class="chips"><span class="chip" data-i18n="chip1">εξαιρετικά προϊόντα</span><span class="chip" data-i18n="chip2">χαμηλές τιμές</span><span class="chip" data-i18n="chip3">απόθεμα</span><span class="chip" data-i18n="chip4">υποστήριξη</span></div>
+  <p class="sub" style="margin:6px 0 12px" data-i18n="why_mid">+ ποιοτική συσκευασία και μοναδικό, ελκυστικό design</p>
+  <div class="chips"><span class="chip" data-i18n="chip5">πιστοποιητικά</span><span class="chip" data-i18n="chip6">μεταφράσεις</span><span class="chip" data-i18n="chip7">εγκρίσεις</span><span class="chip" data-i18n="chip8">εγγυήσεις</span></div>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
 
 <section><div class="wrap">
-  <h2>Τα <span class="r">προϊόντα</span> μας</h2>
-  <p class="sub">Δημοφιλή αξεσουάρ με γρήγορη κυκλοφορία — λάμπες LED & αλογόνου, καλύμματα, υαλοκαθαριστήρες και πολλά άλλα.</p>
-  <div class="grid prods"><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/h7price.jpg" alt="Λάμπα H7 αλογόνου CARGUARD"><figcaption>Λάμπα H7 αλογόνου</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-h7-55w.jpg" alt="Λάμπα H7 12V 55W CARGUARD"><figcaption>Λάμπα H7 12V 55W</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-trusa.jpg" alt="Κουτί πρώτων βοηθειών CARGUARD"><figcaption>Κουτί πρώτων βοηθειών</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-covorase.jpg" alt="Πατάκια αυτοκινήτου CARGUARD"><figcaption>Πατάκια αυτοκινήτου</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-volan.jpg" alt="Κάλυμμα τιμονιού CARGUARD"><figcaption>Κάλυμμα τιμονιού</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-alarma.jpg" alt="Συναγερμός αυτοκινήτου CARGUARD"><figcaption>Συναγερμός αυτοκινήτου</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-booster.jpg" alt="Καλώδια εκκίνησης 300A CARGUARD"><figcaption>Καλώδια εκκίνησης 300A</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-senzori.jpg" alt="Αισθητήρες παρκαρίσματος CARGUARD"><figcaption>Αισθητήρες παρκαρίσματος</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-redresor.jpg" alt="Φορτιστής μπαταρίας 6V/12V CARGUARD"><figcaption>Φορτιστής μπαταρίας 6V/12V</figcaption></figure></a></div>
+  <h2 data-i18n="prods_h2">Τα <span class="r">προϊόντα</span> μας</h2>
+  <p class="sub" data-i18n="prods_sub">Δημοφιλή αξεσουάρ με γρήγορη κυκλοφορία — λάμπες LED & αλογόνου, καλύμματα, υαλοκαθαριστήρες και πολλά άλλα.</p>
+  <div class="grid prods"><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/h7price.jpg" alt="Λάμπα H7 αλογόνου CARGUARD"><figcaption data-i18n="p1">Λάμπα H7 αλογόνου</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-h7-55w.jpg" alt="Λάμπα H7 12V 55W CARGUARD"><figcaption data-i18n="p2">Λάμπα H7 12V 55W</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-trusa.jpg" alt="Κουτί πρώτων βοηθειών CARGUARD"><figcaption data-i18n="p3">Κουτί πρώτων βοηθειών</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-covorase.jpg" alt="Πατάκια αυτοκινήτου CARGUARD"><figcaption data-i18n="p4">Πατάκια αυτοκινήτου</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-volan.jpg" alt="Κάλυμμα τιμονιού CARGUARD"><figcaption data-i18n="p5">Κάλυμμα τιμονιού</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-alarma.jpg" alt="Συναγερμός αυτοκινήτου CARGUARD"><figcaption data-i18n="p6">Συναγερμός αυτοκινήτου</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-booster.jpg" alt="Καλώδια εκκίνησης 300A CARGUARD"><figcaption data-i18n="p7">Καλώδια εκκίνησης 300A</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-senzori.jpg" alt="Αισθητήρες παρκαρίσματος CARGUARD"><figcaption data-i18n="p8">Αισθητήρες παρκαρίσματος</figcaption></figure></a><a href="#inscriere" style="text-decoration:none;color:inherit"><figure><img src="assets/prod/prod-redresor.jpg" alt="Φορτιστής μπαταρίας 6V/12V CARGUARD"><figcaption data-i18n="p9">Φορτιστής μπαταρίας 6V/12V</figcaption></figure></a></div>
   <div class="range"><img src="assets/range.jpg" alt="Deluxe καλύμματα καθισμάτων CARGUARD®"></div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
 
 <section style="background:var(--bg2)"><div class="wrap">
-  <h2>ΟΦΕΛΗ <span class="r">για το κατάστημά σας</span></h2>
-  <p class="sub">Γιατί η συνεργασία με τη CARGUARD® αυξάνει τις πωλήσεις και το περιθώριό σας.</p>
+  <h2 data-i18n="ben_h2">ΟΦΕΛΗ <span class="r">για το κατάστημά σας</span></h2>
+  <p class="sub" data-i18n="ben_sub">Γιατί η συνεργασία με τη CARGUARD® αυξάνει τις πωλήσεις και το περιθώριό σας.</p>
   <div class="grid">
-    <div class="card"><div class="n">1</div><h3>Universal προϊόντα</h3><div class="ex">π.χ. universal καλύμματα καθισμάτων</div><p>Πουλάτε το ίδιο προϊόν σε πολύ περισσότερους πελάτες. Γρήγορη κυκλοφορία, προσιτές τιμές.</p></div>
-    <div class="card"><div class="n">2</div><h3>Premium συσκευασία</h3><div class="ex">π.χ. λάμπες αυτοκινήτου</div><p>Τα προϊόντα ξεχωρίζουν στο ράφι και εμπνέουν εμπιστοσύνη. Περισσότερες αυθόρμητες αγορές.</p></div>
-    <div class="card"><div class="n">3</div><h3>Ανταγωνιστική τιμή</h3><div class="ex">π.χ. λάμπες H7, ακροδέκτες μπαταρίας</div><p>Καλά περιθώρια ακόμη και σε μικρές ποσότητες. Χαμηλή τιμή & υψηλή ζήτηση.</p></div>
-    <div class="card"><div class="n">4</div><h3>Γρήγορη κυκλοφορία</h3><div class="ex">π.χ. υαλοκαθαριστήρες</div><p>Σταθερή ζήτηση όλο τον χρόνο. Υγιές cashflow, χωρίς δεσμευμένα χρήματα.</p></div>
-    <div class="card"><div class="n">5</div><h3>Ελεγμένη ποιότητα</h3><div class="ex">ευρωπαϊκά πρότυπα</div><p>Λιγότερες επιστροφές και παράπονα. Χαμηλότερο κόστος, πιστοί πελάτες.</p></div>
-    <div class="card"><div class="n">6</div><h3>Διαφοροποιημένη γκάμα</h3><div class="ex">πολλές κατηγορίες</div><p>Γεμίζετε εύκολα τα ράφια. Μικρότερος εμπορικός κίνδυνος, πιο σταθερές πωλήσεις.</p></div>
+    <div class="card"><div class="n">1</div><h3 data-i18n="b1_h">Universal προϊόντα</h3><div class="ex" data-i18n="b1_ex">π.χ. universal καλύμματα καθισμάτων</div><p data-i18n="b1_p">Πουλάτε το ίδιο προϊόν σε πολύ περισσότερους πελάτες. Γρήγορη κυκλοφορία, προσιτές τιμές.</p></div>
+    <div class="card"><div class="n">2</div><h3 data-i18n="b2_h">Premium συσκευασία</h3><div class="ex" data-i18n="b2_ex">π.χ. λάμπες αυτοκινήτου</div><p data-i18n="b2_p">Τα προϊόντα ξεχωρίζουν στο ράφι και εμπνέουν εμπιστοσύνη. Περισσότερες αυθόρμητες αγορές.</p></div>
+    <div class="card"><div class="n">3</div><h3 data-i18n="b3_h">Ανταγωνιστική τιμή</h3><div class="ex" data-i18n="b3_ex">π.χ. λάμπες H7, ακροδέκτες μπαταρίας</div><p data-i18n="b3_p">Καλά περιθώρια ακόμη και σε μικρές ποσότητες. Χαμηλή τιμή & υψηλή ζήτηση.</p></div>
+    <div class="card"><div class="n">4</div><h3 data-i18n="b4_h">Γρήγορη κυκλοφορία</h3><div class="ex" data-i18n="b4_ex">π.χ. υαλοκαθαριστήρες</div><p data-i18n="b4_p">Σταθερή ζήτηση όλο τον χρόνο. Υγιές cashflow, χωρίς δεσμευμένα χρήματα.</p></div>
+    <div class="card"><div class="n">5</div><h3 data-i18n="b5_h">Ελεγμένη ποιότητα</h3><div class="ex" data-i18n="b5_ex">ευρωπαϊκά πρότυπα</div><p data-i18n="b5_p">Λιγότερες επιστροφές και παράπονα. Χαμηλότερο κόστος, πιστοί πελάτες.</p></div>
+    <div class="card"><div class="n">6</div><h3 data-i18n="b6_h">Διαφοροποιημένη γκάμα</h3><div class="ex" data-i18n="b6_ex">πολλές κατηγορίες</div><p data-i18n="b6_p">Γεμίζετε εύκολα τα ράφια. Μικρότερος εμπορικός κίνδυνος, πιο σταθερές πωλήσεις.</p></div>
   </div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
 
 <section><div class="wrap">
-  <h2>Δεν σας ζητάμε να μας πιστέψετε <span class="r">στα λόγια.</span> Σας δείχνουμε τα νούμερα.</h2>
+  <h2 data-i18n="stats_h2">Δεν σας ζητάμε να μας πιστέψετε <span class="r">στα λόγια.</span> Σας δείχνουμε τα νούμερα.</h2>
   <div class="stats" style="margin-top:22px">
-    <div class="stat"><div class="v">2007</div><div class="l">ενεργή B2B πλατφόρμα από</div></div>
-    <div class="stat"><div class="v">1000+</div><div class="l">προϊόντα στο portfolio</div></div>
-    <div class="stat"><div class="v">3000</div><div class="l">ενεργοί συνεργάτες</div></div>
-    <div class="stat"><div class="v">2–3</div><div class="l">ημέρες — παράδοση σε όλη τη χώρα</div></div>
+    <div class="stat"><div class="v">2007</div><div class="l" data-i18n="stat1">ενεργή B2B πλατφόρμα από</div></div>
+    <div class="stat"><div class="v">1000+</div><div class="l" data-i18n="stat2">προϊόντα στο portfolio</div></div>
+    <div class="stat"><div class="v">3000</div><div class="l" data-i18n="stat3">ενεργοί συνεργάτες</div></div>
+    <div class="stat"><div class="v">2–3</div><div class="l" data-i18n="stat4">ημέρες — παράδοση σε όλη τη χώρα</div></div>
   </div>
   <div class="facts">
-    <div class="fact"><span class="i">✓</span><div>Εγγύηση <b>2–3 χρόνια</b> (στους συναγερμούς: εφ' όρου ζωής)</div></div>
-    <div class="fact"><span class="i">✓</span><div>Πιστοποιητικά <b>ευρωπαϊκής συμμόρφωσης</b> — ασφάλεια & νομιμότητα στο ράφι</div></div>
-    <div class="fact"><span class="i">✓</span><div>Εθνική διανομή & αξιόπιστο logistics</div></div>
-    <div class="fact"><span class="i">✓</span><div>Αφοσιωμένος σύμβουλος πωλήσεων για κάθε συνεργάτη</div></div>
+    <div class="fact"><span class="i">✓</span><div data-i18n="fact1">Εγγύηση <b>2–3 χρόνια</b> (στους συναγερμούς: εφ' όρου ζωής)</div></div>
+    <div class="fact"><span class="i">✓</span><div data-i18n="fact2">Πιστοποιητικά <b>ευρωπαϊκής συμμόρφωσης</b> — ασφάλεια & νομιμότητα στο ράφι</div></div>
+    <div class="fact"><span class="i">✓</span><div data-i18n="fact3">Εθνική διανομή & αξιόπιστο logistics</div></div>
+    <div class="fact"><span class="i">✓</span><div data-i18n="fact4">Αφοσιωμένος σύμβουλος πωλήσεων για κάθε συνεργάτη</div></div>
   </div>
-  <p class="sub" style="margin:28px 0 6px"><b style="color:#fff">Εθνική διανομή & συνεργασίες με:</b></p>
+  <p class="sub" style="margin:28px 0 6px"><b style="color:#fff" data-i18n="partners_lbl">Εθνική διανομή & συνεργασίες με:</b></p>
   <div class="partners-grid">
     <div class="pcard"><img src="assets/partners/carrefour.png" alt="Carrefour"><span>Carrefour</span></div>
     <div class="pcard"><img src="assets/partners/auchan.png" alt="Auchan"><span>Auchan</span></div>
@@ -176,51 +185,51 @@ fbq('init','1344314721133063');fbq('track','PageView');
     <div class="pcard"><img src="assets/partners/autototal.png" alt="Autototal"><span>Autototal</span></div>
     <div class="pcard"><img src="assets/partners/materom.png" alt="Materom"><span>Materom</span></div>
   </div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
 
 <section style="background:var(--bg2)"><div class="wrap">
-  <h2>Κριτικές <span class="r">από Google</span></h2>
+  <h2 data-i18n="rev_h2">Κριτικές <span class="r">από Google</span></h2>
   <div class="reviews">
-    <div class="rev"><div class="stars">★★★★★</div><p>Πολλά αξεσουάρ, λογικές τιμές και ακριβής, σωστή παράδοση. Άριστη επικοινωνία από τον σύμβουλο. Τα προϊόντα είναι ποιοτικά.</p><div class="who">Adi Expert Auto</div></div>
-    <div class="rev"><div class="stars">★★★★★</div><p>Είναι μοναδικοί, εμπορεύονται μόνο ποιοτικά προϊόντα, 100% αφοσιωμένο προσωπικό, πραγματική εγγύηση σε όλα. Συνεργαζόμαστε πάνω από 10 χρόνια — τους προτείνω.</p><div class="who">Vasilescu Stelian</div></div>
-    <div class="rev"><div class="stars">★★★★★</div><p>Πολύ ικανοποιημένη από τα προϊόντα της Globiz. Έχουν τις καλύτερες τιμές και μεγάλη γκάμα. Ο σύμβουλος με στηρίζει με σεβασμό. Την προτείνω!</p><div class="who">Maria Toșe</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p data-i18n="rev1">Πολλά αξεσουάρ, λογικές τιμές και ακριβής, σωστή παράδοση. Άριστη επικοινωνία από τον σύμβουλο. Τα προϊόντα είναι ποιοτικά.</p><div class="who">Adi Expert Auto</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p data-i18n="rev2">Είναι μοναδικοί, εμπορεύονται μόνο ποιοτικά προϊόντα, 100% αφοσιωμένο προσωπικό, πραγματική εγγύηση σε όλα. Συνεργαζόμαστε πάνω από 10 χρόνια — τους προτείνω.</p><div class="who">Vasilescu Stelian</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p data-i18n="rev3">Πολύ ικανοποιημένη από τα προϊόντα της Globiz. Έχουν τις καλύτερες τιμές και μεγάλη γκάμα. Ο σύμβουλος με στηρίζει με σεβασμό. Την προτείνω!</p><div class="who">Maria Toșe</div></div>
   </div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
 
 <section><div class="wrap faq">
-  <h2>Συχνές <span class="r">ερωτήσεις</span></h2>
-  <details><summary>«Δεν θέλω να μου μείνει εμπόρευμα στο ράφι.»</summary><p>Έχετε πρόσβαση σε προϊόντα με σταθερή ζήτηση και προτάσεις από τον σύμβουλο, ώστε να παραγγέλνετε έξυπνα.</p></details>
-  <details><summary>«Με ενδιαφέρει η παράδοση. Τη θέλω γρήγορα.»</summary><p>Οι παραγγελίες φτάνουν σε 2–3 ημέρες, σε όλη τη χώρα.</p></details>
-  <details><summary>«Κι αν χαλάσει;»</summary><p>Εγγύηση 2–3 χρόνια, με διαδικασία επισκευής/αντικατάστασης σε εγγύηση.</p></details>
-  <details><summary>«Είναι καλές οι τιμές;»</summary><p>Ανταγωνιστικές τιμές, διαφοροποιημένες ανά ποσότητα και με σταθερότητα 2–3 μηνών.</p></details>
-  <details><summary>«Είμαι νέος πελάτης. Πώς πληρώνω;»</summary><p>Σαφείς όροι στην αρχή, και στη συνέχεια πιστωτικά όρια ανάλογα με τον όγκο (30/45/60 ημέρες).</p></details>
-  <details><summary>«Δεν έχω χρόνο να κυνηγάω προμηθευτές.»</summary><p>Αφοσιωμένος σύμβουλος, άμεση απάντηση και B2B πλατφόρμα — παραγγέλνετε πιο γρήγορα.</p></details>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
+  <h2 data-i18n="faq_h2">Συχνές <span class="r">ερωτήσεις</span></h2>
+  <details><summary data-i18n="faq_q1">«Δεν θέλω να μου μείνει εμπόρευμα στο ράφι.»</summary><p data-i18n="faq_a1">Έχετε πρόσβαση σε προϊόντα με σταθερή ζήτηση και προτάσεις από τον σύμβουλο, ώστε να παραγγέλνετε έξυπνα.</p></details>
+  <details><summary data-i18n="faq_q2">«Με ενδιαφέρει η παράδοση. Τη θέλω γρήγορα.»</summary><p data-i18n="faq_a2">Οι παραγγελίες φτάνουν σε 2–3 ημέρες, σε όλη τη χώρα.</p></details>
+  <details><summary data-i18n="faq_q3">«Κι αν χαλάσει;»</summary><p data-i18n="faq_a3">Εγγύηση 2–3 χρόνια, με διαδικασία επισκευής/αντικατάστασης σε εγγύηση.</p></details>
+  <details><summary data-i18n="faq_q4">«Είναι καλές οι τιμές;»</summary><p data-i18n="faq_a4">Ανταγωνιστικές τιμές, διαφοροποιημένες ανά ποσότητα και με σταθερότητα 2–3 μηνών.</p></details>
+  <details><summary data-i18n="faq_q5">«Είμαι νέος πελάτης. Πώς πληρώνω;»</summary><p data-i18n="faq_a5">Σαφείς όροι στην αρχή, και στη συνέχεια πιστωτικά όρια ανάλογα με τον όγκο (30/45/60 ημέρες).</p></details>
+  <details><summary data-i18n="faq_q6">«Δεν έχω χρόνο να κυνηγάω προμηθευτές.»</summary><p data-i18n="faq_a6">Αφοσιωμένος σύμβουλος, άμεση απάντηση και B2B πλατφόρμα — παραγγέλνετε πιο γρήγορα.</p></details>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a></div></section>
 
 <section><div class="wrap">
   <div class="cta">
     <div class="giftwrap">
       <img class="giftimg" src="assets/gift.jpg" alt="Δώρο CARGUARD®">
       <div>
-        <img src="assets/logo.png" alt="CARGUARD®" style="height:46px;margin:0 auto 14px;display:block"><h2>Γίνετε <span class="r">συνεργάτης</span> μας</h2>
-        <p class="sub" style="margin:8px 0 0">Εγγραφείτε δωρεάν στην B2B πλατφόρμα μας και αποκτήστε πρόσβαση στις τιμές χονδρικής και σε ολόκληρη τη γκάμα προϊόντων.</p>
-        <div class="gift">🎁 Δώρο έκπληξη στην πρώτη σας παραγγελία — ανεξαρτήτως ποσού!</div><br>
+        <img src="assets/logo.png" alt="CARGUARD®" style="height:46px;margin:0 auto 14px;display:block"><h2 data-i18n="cta_h2">Γίνετε <span class="r">συνεργάτης</span> μας</h2>
+        <p class="sub" style="margin:8px 0 0" data-i18n="cta_sub">Εγγραφείτε δωρεάν στην B2B πλατφόρμα μας και αποκτήστε πρόσβαση στις τιμές χονδρικής και σε ολόκληρη τη γκάμα προϊόντων.</p>
+        <div class="gift" data-i18n="gift">🎁 Δώρο έκπληξη στην πρώτη σας παραγγελία — ανεξαρτήτως ποσού!</div><br>
         <form class="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:8px;text-align:left;max-width:440px;margin-left:auto;margin-right:auto">
-  <div style="margin-bottom:8px"><input name="AFM" placeholder="ΑΦΜ / Ενδοκοινοτικό VAT (π.χ. EL123456789) *" required style="margin-bottom:4px"><div style="display:flex;align-items:center;gap:8px;margin-top:2px"><button type="button" class="vatcheck-btn" style="background:#1c1c20;border:1px solid var(--line);color:var(--tx);padding:7px 12px;border-radius:8px;font-size:12.5px;cursor:pointer">Έλεγχος ΑΦΜ</button><span class="vatstatus" style="font-size:12px;color:var(--mut)"></span></div></div><div class="frow"><input name="Onoma" placeholder="Όνομα *" required><input name="Etaireia" placeholder="Εταιρεία *" required></div>
-  <div class="frow"><input name="Tilefono" type="tel" placeholder="Τηλέφωνο *" required><input name="Poli" placeholder="Πόλη *" required></div>
-  <input name="Email" type="email" placeholder="Email *" required>
+  <div style="margin-bottom:8px"><input name="AFM" data-i18n-ph="ph_vat" placeholder="ΑΦΜ / Ενδοκοινοτικό VAT (π.χ. EL123456789) *" required style="margin-bottom:4px"><div style="display:flex;align-items:center;gap:8px;margin-top:2px"><button type="button" class="vatcheck-btn" data-i18n="vatcheck_btn" style="background:#1c1c20;border:1px solid var(--line);color:var(--tx);padding:7px 12px;border-radius:8px;font-size:12.5px;cursor:pointer">Έλεγχος ΑΦΜ</button><span class="vatstatus" style="font-size:12px;color:var(--mut)"></span></div></div><div class="frow"><input name="Onoma" data-i18n-ph="ph_name" placeholder="Όνομα *" required><input name="Etaireia" data-i18n-ph="ph_company" placeholder="Εταιρεία *" required></div>
+  <div class="frow"><input name="Tilefono" type="tel" data-i18n-ph="ph_phone" placeholder="Τηλέφωνο *" required><input name="Poli" data-i18n-ph="ph_city" placeholder="Πόλη *" required></div>
+  <input name="Email" type="email" data-i18n-ph="ph_email" placeholder="Email *" required>
   <input type="hidden" name="_subject" value="Nea eggrafi B2B Grecia (landing)"><input type="hidden" name="_cc" value="iosif.budai@globiz.ro">
   <label style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--mut);margin:2px 0 14px;text-align:left;line-height:1.45">
     <input type="checkbox" name="Synainesi_GDPR" value="Nai" required style="width:auto;margin-top:3px;flex:0 0 auto">
-    <span>Συμφωνώ να επικοινωνήσει μαζί μου η CARGUARD® (τηλέφωνο, email ή WhatsApp) σχετικά με τη συνεργασία χονδρικής B2B. Τα στοιχεία μου χρησιμοποιούνται μόνο για αυτόν τον σκοπό και μπορώ να ανακαλέσω τη συγκατάθεσή μου οποτεδήποτε. Δείτε την <a href="https://carguard.shop/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Πολιτική Απορρήτου</a> και τους <a href="https://carguard.shop/terms_and_conditions" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Όρους Χρήσης</a>.</span>
+    <span data-i18n="gdpr_label">Συμφωνώ να επικοινωνήσει μαζί μου η CARGUARD® (τηλέφωνο, email ή WhatsApp) σχετικά με τη συνεργασία χονδρικής B2B. Δείτε την <a href="https://carguard.shop/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Πολιτική Απορρήτου</a> και τους <a href="https://carguard.shop/terms_and_conditions" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Όρους Χρήσης</a>.</span>
   </label>
-  <button type="submit" class="btn" style="width:100%;border:0;cursor:pointer;font-size:17px">Στείλτε τα στοιχεία σας →</button>
-  <div class="reassure">✓ Δωρεάν · 2 λεπτά · Επικοινωνούμε μαζί σας για να ολοκληρώσετε την εγγραφή</div>
+  <button type="submit" class="btn" data-i18n="submit_btn" style="width:100%;border:0;cursor:pointer;font-size:17px">Στείλτε τα στοιχεία σας →</button>
+  <div class="reassure" data-i18n="reassure_cta">✓ Δωρεάν · 2 λεπτά · Επικοινωνούμε μαζί σας για να ολοκληρώσετε την εγγραφή</div>
 </form>
-<div class="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">✅</div><h3 style="font-size:22px;margin:8px 0">Ευχαριστούμε!</h3><p class="sub">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
+<div class="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">✅</div><h3 style="font-size:22px;margin:8px 0" data-i18n="thank_title">Ευχαριστούμε!</h3><p class="sub" data-i18n="thank_body">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
 <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--line)">
-  <p class="sub" style="font-size:14px;margin:0 0 12px">Ξέρετε ήδη ότι θέλετε να γίνετε συνεργάτης;</p>
-  <a href="https://carguard.shop/user/registration?ref=landing_gr" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Εγγραφείτε απευθείας στην πλατφόρμα →</a>
+  <p class="sub" style="font-size:14px;margin:0 0 12px" data-i18n="already_know">Ξέρετε ήδη ότι θέλετε να γίνετε συνεργάτης;</p>
+  <a href="https://carguard.shop/user/registration?ref=landing_gr" target="_blank" rel="noopener" data-i18n="register_direct" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Εγγραφείτε απευθείας στην πλατφόρμα →</a>
 </div>
 
       </div>
@@ -228,7 +237,157 @@ fbq('init','1344314721133063');fbq('track','PageView');
   </div>
 </div></section>
 
-<footer><div class="wrap"><b>CARGUARD®</b> · Globiz Group · carguard.shop · globiz.ro<br>Αξεσουάρ αυτοκινήτου χονδρικής (B2B) — ποιότητα, εγγύηση, απευθείας από τον κατασκευαστή.</div></footer>
+<footer><div class="wrap"><b>CARGUARD®</b> · Globiz Group · carguard.shop · globiz.ro<br><span data-i18n="footer_line">Αξεσουάρ αυτοκινήτου χονδρικής (B2B) — ποιότητα, εγγύηση, απευθείας από τον κατασκευαστή.</span></div></footer>
+<script>
+var I18N = {
+  el: {
+    __title: "CARGUARD® — B2B αξεσουάρ αυτοκινήτου | Γίνε συνεργάτης",
+    nav_register: "Εγγραφή →",
+    kicker: "ο B2B συνεργάτης σας",
+    h1: 'Αξεσουάρ αυτοκινήτου που φέρνουν <span style="color:var(--red2)">κέρδος</span> — όχι σκόνη στο ράφι.',
+    lead: "Έχετε κατάστημα ή συνεργείο αυτοκινήτων ή εταιρεία διανομής και θέλετε εμπόρευμα που <b>κινείται</b>; Γίνετε συνεργάτης της CARGUARD®.",
+    ph_vat: "ΑΦΜ / Ενδοκοινοτικό VAT (π.χ. EL123456789) *",
+    vatcheck_btn: "Έλεγχος ΑΦΜ",
+    ph_name: "Όνομα *", ph_company: "Εταιρεία *", ph_phone: "Τηλέφωνο *", ph_city: "Πόλη *", ph_email: "Email *",
+    gdpr_label: 'Συμφωνώ να επικοινωνήσει μαζί μου η CARGUARD® (τηλέφωνο, email ή WhatsApp) σχετικά με τη συνεργασία χονδρικής B2B. Δείτε την <a href="https://carguard.shop/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Πολιτική Απορρήτου</a> και τους <a href="https://carguard.shop/terms_and_conditions" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Όρους Χρήσης</a>.',
+    submit_btn: "Στείλτε τα στοιχεία σας →",
+    reassure_hero: "✓ Δωρεάν · 2 λεπτά · Σας καλούμε εντός 24ω",
+    reassure_cta: "✓ Δωρεάν · 2 λεπτά · Επικοινωνούμε μαζί σας για να ολοκληρώσετε την εγγραφή",
+    thank_title: "Ευχαριστούμε!", thank_body: "Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.",
+    portrait_tag: "Ο συνεργάτης σας για ποιοτικά αξεσουάρ αυτοκινήτου",
+    story_h2: 'Η ιστορία <span class="r">CARGUARD®</span>', story_sub: "Από ένα απλό πάθος, σε μια ευρωπαϊκή μάρκα.",
+    pain_h2: 'Ξέρουμε <span class="r">πώς είναι…</span>',
+    pain_body: 'Μπαίνει ένας και λέει: <b>«Πιο φθηνά, αφεντικό… το βρήκα online.»</b> Έρχεται άλλος με το προϊόν στο χέρι: <b>«Άλλαξέ το με την εγγύηση, τώρα.»</b><br><br>Και τότε πέφτουν και τα υπόλοιπα: έλεγχοι, χαρτιά, πιστοποιητικά, μεταφράσεις, εγκρίσεις… και πρέπει να είστε εντάξει με όλα — χωρίς να κλείσετε το μαγαζί.<br><br>Και στο τέλος του μήνα: φόροι, μισθοί, ενοίκια, λογαριασμοί. Δουλεύετε από το πρωί ως το βράδυ και καμιά φορά μένετε χωρίς ρευστό ακριβώς όταν το χρειάζεστε πιο πολύ.',
+    cta_join: "Γίνε συνεργάτης →",
+    why_h2: 'Γι\' αυτό υπάρχει η <span class="r">CARGUARD®</span>', why_sub: "Για να έχετε έναν συνεργάτη που μπορείτε να εμπιστευτείτε ακόμη και σε περιόδους κρίσης:",
+    chip1: "εξαιρετικά προϊόντα", chip2: "χαμηλές τιμές", chip3: "απόθεμα", chip4: "υποστήριξη",
+    why_mid: "+ ποιοτική συσκευασία και μοναδικό, ελκυστικό design",
+    chip5: "πιστοποιητικά", chip6: "μεταφράσεις", chip7: "εγκρίσεις", chip8: "εγγυήσεις",
+    prods_h2: 'Τα <span class="r">προϊόντα</span> μας', prods_sub: "Δημοφιλή αξεσουάρ με γρήγορη κυκλοφορία — λάμπες LED & αλογόνου, καλύμματα, υαλοκαθαριστήρες και πολλά άλλα.",
+    p1: "Λάμπα H7 αλογόνου", p2: "Λάμπα H7 12V 55W", p3: "Κουτί πρώτων βοηθειών", p4: "Πατάκια αυτοκινήτου", p5: "Κάλυμμα τιμονιού", p6: "Συναγερμός αυτοκινήτου", p7: "Καλώδια εκκίνησης 300A", p8: "Αισθητήρες παρκαρίσματος", p9: "Φορτιστής μπαταρίας 6V/12V",
+    ben_h2: 'ΟΦΕΛΗ <span class="r">για το κατάστημά σας</span>', ben_sub: "Γιατί η συνεργασία με τη CARGUARD® αυξάνει τις πωλήσεις και το περιθώριό σας.",
+    b1_h: "Universal προϊόντα", b1_ex: "π.χ. universal καλύμματα καθισμάτων", b1_p: "Πουλάτε το ίδιο προϊόν σε πολύ περισσότερους πελάτες. Γρήγορη κυκλοφορία, προσιτές τιμές.",
+    b2_h: "Premium συσκευασία", b2_ex: "π.χ. λάμπες αυτοκινήτου", b2_p: "Τα προϊόντα ξεχωρίζουν στο ράφι και εμπνέουν εμπιστοσύνη. Περισσότερες αυθόρμητες αγορές.",
+    b3_h: "Ανταγωνιστική τιμή", b3_ex: "π.χ. λάμπες H7, ακροδέκτες μπαταρίας", b3_p: "Καλά περιθώρια ακόμη και σε μικρές ποσότητες. Χαμηλή τιμή & υψηλή ζήτηση.",
+    b4_h: "Γρήγορη κυκλοφορία", b4_ex: "π.χ. υαλοκαθαριστήρες", b4_p: "Σταθερή ζήτηση όλο τον χρόνο. Υγιές cashflow, χωρίς δεσμευμένα χρήματα.",
+    b5_h: "Ελεγμένη ποιότητα", b5_ex: "ευρωπαϊκά πρότυπα", b5_p: "Λιγότερες επιστροφές και παράπονα. Χαμηλότερο κόστος, πιστοί πελάτες.",
+    b6_h: "Διαφοροποιημένη γκάμα", b6_ex: "πολλές κατηγορίες", b6_p: "Γεμίζετε εύκολα τα ράφια. Μικρότερος εμπορικός κίνδυνος, πιο σταθερές πωλήσεις.",
+    stats_h2: 'Δεν σας ζητάμε να μας πιστέψετε <span class="r">στα λόγια.</span> Σας δείχνουμε τα νούμερα.',
+    stat1: "ενεργή B2B πλατφόρμα από", stat2: "προϊόντα στο portfolio", stat3: "ενεργοί συνεργάτες", stat4: "ημέρες — παράδοση σε όλη τη χώρα",
+    fact1: "Εγγύηση <b>2–3 χρόνια</b> (στους συναγερμούς: εφ' όρου ζωής)",
+    fact2: "Πιστοποιητικά <b>ευρωπαϊκής συμμόρφωσης</b> — ασφάλεια & νομιμότητα στο ράφι",
+    fact3: "Εθνική διανομή & αξιόπιστο logistics", fact4: "Αφοσιωμένος σύμβουλος πωλήσεων για κάθε συνεργάτη",
+    partners_lbl: "Εθνική διανομή & συνεργασίες με:",
+    rev_h2: 'Κριτικές <span class="r">από Google</span>',
+    rev1: "Πολλά αξεσουάρ, λογικές τιμές και ακριβής, σωστή παράδοση. Άριστη επικοινωνία από τον σύμβουλο. Τα προϊόντα είναι ποιοτικά.",
+    rev2: "Είναι μοναδικοί, εμπορεύονται μόνο ποιοτικά προϊόντα, 100% αφοσιωμένο προσωπικό, πραγματική εγγύηση σε όλα. Συνεργαζόμαστε πάνω από 10 χρόνια — τους προτείνω.",
+    rev3: "Πολύ ικανοποιημένη από τα προϊόντα της Globiz. Έχουν τις καλύτερες τιμές και μεγάλη γκάμα. Ο σύμβουλος με στηρίζει με σεβασμό. Την προτείνω!",
+    faq_h2: 'Συχνές <span class="r">ερωτήσεις</span>',
+    faq_q1: "«Δεν θέλω να μου μείνει εμπόρευμα στο ράφι.»", faq_a1: "Έχετε πρόσβαση σε προϊόντα με σταθερή ζήτηση και προτάσεις από τον σύμβουλο, ώστε να παραγγέλνετε έξυπνα.",
+    faq_q2: "«Με ενδιαφέρει η παράδοση. Τη θέλω γρήγορα.»", faq_a2: "Οι παραγγελίες φτάνουν σε 2–3 ημέρες, σε όλη τη χώρα.",
+    faq_q3: "«Κι αν χαλάσει;»", faq_a3: "Εγγύηση 2–3 χρόνια, με διαδικασία επισκευής/αντικατάστασης σε εγγύηση.",
+    faq_q4: "«Είναι καλές οι τιμές;»", faq_a4: "Ανταγωνιστικές τιμές, διαφοροποιημένες ανά ποσότητα και με σταθερότητα 2–3 μηνών.",
+    faq_q5: "«Είμαι νέος πελάτης. Πώς πληρώνω;»", faq_a5: "Σαφείς όροι στην αρχή, και στη συνέχεια πιστωτικά όρια ανάλογα με τον όγκο (30/45/60 ημέρες).",
+    faq_q6: "«Δεν έχω χρόνο να κυνηγάω προμηθευτές.»", faq_a6: "Αφοσιωμένος σύμβουλος, άμεση απάντηση και B2B πλατφόρμα — παραγγέλνετε πιο γρήγορα.",
+    cta_h2: 'Γίνετε <span class="r">συνεργάτης</span> μας',
+    cta_sub: "Εγγραφείτε δωρεάν στην B2B πλατφόρμα μας και αποκτήστε πρόσβαση στις τιμές χονδρικής και σε ολόκληρη τη γκάμα προϊόντων.",
+    gift: "🎁 Δώρο έκπληξη στην πρώτη σας παραγγελία — ανεξαρτήτως ποσού!",
+    already_know: "Ξέρετε ήδη ότι θέλετε να γίνετε συνεργάτης;",
+    register_direct: "Εγγραφείτε απευθείας στην πλατφόρμα →",
+    footer_line: "Αξεσουάρ αυτοκινήτου χονδρικής (B2B) — ποιότητα, εγγύηση, απευθείας από τον κατασκευαστή.",
+    sticky_small: "Δωρεάν · 2 λεπτά · Πρόσβαση στις τιμές χονδρικής",
+    vat_checking: "Έλεγχος…", vat_valid: "✓ Έγκυρο ΑΦΜ", vat_invalid: "Δεν επιβεβαιώθηκε", vat_error: "Σφάλμα δικτύου"
+  },
+  en: {
+    __title: "CARGUARD® — B2B Car Accessories | Become a Partner",
+    nav_register: "Register →",
+    kicker: "Your B2B Partner",
+    h1: 'Car accessories that bring <span style="color:var(--red2)">profit</span> — not dust on the shelf.',
+    lead: "Do you run a shop, a car service, or a distribution company, and want stock that <b>actually moves</b>? Become a CARGUARD® partner.",
+    ph_vat: "VAT number / Intra-EU VAT (e.g. EL123456789) *",
+    vatcheck_btn: "Check VAT",
+    ph_name: "Name *", ph_company: "Company *", ph_phone: "Phone *", ph_city: "City *", ph_email: "Email *",
+    gdpr_label: 'I agree that CARGUARD® may contact me (by phone, email or WhatsApp) about the B2B wholesale partnership. See the <a href="https://carguard.shop/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Privacy Policy</a> and <a href="https://carguard.shop/terms_and_conditions" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Terms of Use</a>.',
+    submit_btn: "Send your details →",
+    reassure_hero: "✓ Free · 2 minutes · We'll call you within 24h",
+    reassure_cta: "✓ Free · 2 minutes · We'll contact you to complete your registration",
+    thank_title: "Thank you!", thank_body: "We've received your details. We'll be in touch shortly.",
+    portrait_tag: "Your partner for quality car accessories",
+    story_h2: 'The <span class="r">CARGUARD®</span> Story', story_sub: "From a simple passion to a European brand.",
+    pain_h2: 'We know <span class="r">how it feels…</span>',
+    pain_body: "One customer walks in and says: <b>“Cheaper, boss… I found it online.”</b> Another shows up, product in hand: <b>“Replace it under warranty, now.”</b><br><br>Then everything else piles on: inspections, paperwork, certificates, translations, approvals… and you have to keep on top of it all — without ever closing the shop.<br><br>And at the end of the month: taxes, salaries, rent, bills. You work from morning to night, and sometimes you're out of cash right when you need it most.",
+    cta_join: "Become a partner →",
+    why_h2: 'That\'s why <span class="r">CARGUARD®</span> exists', why_sub: "So you have a partner you can trust — even in tough times:",
+    chip1: "excellent products", chip2: "low prices", chip3: "stock availability", chip4: "support",
+    why_mid: "+ quality packaging and a unique, eye-catching design",
+    chip5: "certificates", chip6: "translations", chip7: "approvals", chip8: "warranties",
+    prods_h2: 'Our <span class="r">products</span>', prods_sub: "Popular, fast-moving accessories — LED & halogen bulbs, covers, wiper blades and much more.",
+    p1: "H7 Halogen Bulb", p2: "H7 Bulb 12V 55W", p3: "First Aid Kit", p4: "Car Floor Mats", p5: "Steering Wheel Cover", p6: "Car Alarm", p7: "300A Jump Start Cables", p8: "Parking Sensors", p9: "6V/12V Battery Charger",
+    ben_h2: 'BENEFITS <span class="r">for your store</span>', ben_sub: "Why partnering with CARGUARD® increases your sales and your margin.",
+    b1_h: "Universal products", b1_ex: "e.g. universal seat covers", b1_p: "You sell the same product to far more customers. Fast turnover, affordable prices.",
+    b2_h: "Premium packaging", b2_ex: "e.g. car bulbs", b2_p: "Products stand out on the shelf and build trust. More impulse purchases.",
+    b3_h: "Competitive pricing", b3_ex: "e.g. H7 bulbs, battery terminals", b3_p: "Healthy margins even on small quantities. Low price & high demand.",
+    b4_h: "Fast turnover", b4_ex: "e.g. wiper blades", b4_p: "Steady demand all year round. Healthy cashflow, no money tied up.",
+    b5_h: "Tested quality", b5_ex: "European standards", b5_p: "Fewer returns and complaints. Lower costs, loyal customers.",
+    b6_h: "Diversified range", b6_ex: "many categories", b6_p: "Easily fill your shelves. Lower commercial risk, more stable sales.",
+    stats_h2: 'We don\'t ask you to just <span class="r">take our word for it.</span> We show you the numbers.',
+    stat1: "active B2B platform since", stat2: "products in the portfolio", stat3: "active partners", stat4: "days — nationwide delivery",
+    fact1: "Warranty of <b>2–3 years</b> (lifetime on alarms)",
+    fact2: "<b>European compliance</b> certificates — safety & legal peace of mind on the shelf",
+    fact3: "Nationwide distribution & reliable logistics", fact4: "A dedicated sales advisor for every partner",
+    partners_lbl: "Nationwide distribution & partnerships with:",
+    rev_h2: 'Reviews <span class="r">from Google</span>',
+    rev1: "A wide range of accessories, fair prices, and accurate, on-time delivery. Excellent communication from the account manager. The products are high quality.",
+    rev2: "They're one of a kind — they only sell quality products, 100% dedicated staff, real warranty on everything. We've worked together for over 10 years — I recommend them.",
+    rev3: "Very satisfied with Globiz's products. They have the best prices and a wide range. My account manager supports me with respect. I recommend them!",
+    faq_h2: 'Frequently Asked <span class="r">Questions</span>',
+    faq_q1: "“I don't want stock sitting unsold on my shelf.”", faq_a1: "You get access to products with steady demand, plus recommendations from your advisor, so you order smart.",
+    faq_q2: "“Delivery matters to me. I want it fast.”", faq_a2: "Orders arrive within 2–3 days, nationwide.",
+    faq_q3: "“What if something breaks?”", faq_a3: "2–3 year warranty, with a clear repair/replacement process.",
+    faq_q4: "“Are the prices good?”", faq_a4: "Competitive prices, tiered by quantity, held stable for 2–3 months.",
+    faq_q5: "“I'm a new customer. How do I pay?”", faq_a5: "Clear terms at the start, followed by credit limits based on volume (30/45/60 days).",
+    faq_q6: "“I don't have time to chase suppliers.”", faq_a6: "A dedicated advisor, quick responses, and a B2B platform — you order faster.",
+    cta_h2: 'Become our <span class="r">partner</span>',
+    cta_sub: "Sign up for free on our B2B platform and get access to wholesale prices and our full product range.",
+    gift: "🎁 Surprise gift on your first order — no matter the amount!",
+    already_know: "Already know you want to become a partner?",
+    register_direct: "Register directly on the platform →",
+    footer_line: "Wholesale car accessories (B2B) — quality, warranty, straight from the manufacturer.",
+    sticky_small: "Free · 2 minutes · Access wholesale prices",
+    vat_checking: "Checking…", vat_valid: "✓ Valid VAT", vat_invalid: "Not verified", vat_error: "Network error"
+  }
+};
+var LANG_KEY = "cg_gr_lang";
+window.CG_LANG = "el";
+function setLang(lang){
+  if (!I18N[lang]) return;
+  window.CG_LANG = lang;
+  document.getElementById("htmlRoot").lang = lang;
+  document.getElementById("pageTitle").textContent = I18N[lang].__title;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){
+    var k = el.getAttribute("data-i18n");
+    if (I18N[lang][k] !== undefined) el.innerHTML = I18N[lang][k];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
+    var k = el.getAttribute("data-i18n-ph");
+    if (I18N[lang][k] !== undefined) el.placeholder = I18N[lang][k];
+  });
+  document.querySelectorAll("[data-lang-btn]").forEach(function(btn){
+    btn.classList.toggle("active", btn.getAttribute("data-lang-btn") === lang);
+  });
+  try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
+}
+document.querySelectorAll("[data-lang-btn]").forEach(function(btn){
+  btn.addEventListener("click", function(){ setLang(btn.getAttribute("data-lang-btn")); });
+});
+(function(){
+  var urlLang = new URLSearchParams(location.search).get("lang");
+  var saved = null;
+  try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
+  var initial = (urlLang === "en" || urlLang === "el") ? urlLang : (saved || "el");
+  setLang(initial);
+})();
+</script>
 <script>(function(){
   var TRIPWIRE_BASE="https://app-gr.carguard.shop";
   document.querySelectorAll("form.leadform").forEach(function(lf){lf.addEventListener("submit",function(e){e.preventDefault();
@@ -241,9 +400,9 @@ fbq('init','1344314721133063');fbq('track','PageView');
     }).catch(function(){lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";});
   });});
   var reg=document.querySelectorAll("a[href*=\"carguard.shop/user/registration\"]");for(var i=0;i<reg.length;i++){reg[i].addEventListener("click",function(){if(window.fbq)fbq("track","Lead");});}
-function cgCheckVatGr(vatInput,companyInput,cityInput,status){var val=vatInput.value.trim();if(!val)return;status.textContent="Έλεγχος…";status.style.color="#a7a7ad";fetch("https://178-105-10-138.sslip.io/api/vat/validate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({vatNumber:val,country:"EL"})}).then(function(r){return r.json();}).then(function(j){if(j.status==="valid"){status.textContent="✓ Έγκυρο ΑΦΜ";status.style.color="#22C55E";if(companyInput&&!companyInput.value&&j.companyName)companyInput.value=j.companyName;if(cityInput&&!cityInput.value&&j.companyAddress)cityInput.value=j.companyAddress;}else{status.textContent="Δεν επιβεβαιώθηκε";status.style.color="#ff5959";}}).catch(function(){status.textContent="Σφάλμα δικτύου";status.style.color="#ff5959";});}
+function cgCheckVatGr(vatInput,companyInput,cityInput,status){var val=vatInput.value.trim();if(!val)return;var L=I18N[window.CG_LANG]||I18N.el;status.textContent=L.vat_checking;status.style.color="#a7a7ad";fetch("https://178-105-10-138.sslip.io/api/vat/validate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({vatNumber:val,country:"EL"})}).then(function(r){return r.json();}).then(function(j){if(j.status==="valid"){status.textContent=L.vat_valid;status.style.color="#22C55E";if(companyInput&&!companyInput.value&&j.companyName)companyInput.value=j.companyName;if(cityInput&&!cityInput.value&&j.companyAddress)cityInput.value=j.companyAddress;}else{status.textContent=L.vat_invalid;status.style.color="#ff5959";}}).catch(function(){status.textContent=L.vat_error;status.style.color="#ff5959";});}
 document.querySelectorAll('[name="AFM"]').forEach(function(vatInput){var form=vatInput.closest("form");var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=form.querySelector(".vatstatus");vatInput.addEventListener("blur",function(){cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
 document.querySelectorAll(".vatcheck-btn").forEach(function(btn){btn.addEventListener("click",function(e){e.preventDefault();var form=btn.closest("form");var vatInput=form.querySelector('[name="AFM"]');var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=btn.parentNode.querySelector(".vatstatus");cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
 })();</script>
-<div class="sticky-cta"><a class="btn" href="#inscriere">Γίνε συνεργάτης →</a><small>Δωρεάν · 2 λεπτά · Πρόσβαση στις τιμές χονδρικής</small></div></body>
+<div class="sticky-cta"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a><small data-i18n="sticky_small">Δωρεάν · 2 λεπτά · Πρόσβαση στις τιμές χονδρικής</small></div></body>
 </html>
