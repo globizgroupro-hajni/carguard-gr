@@ -13,6 +13,17 @@ img{max-width:100%;display:block}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 .btn{display:inline-block;background:var(--red);color:#fff;font-weight:800;text-decoration:none;padding:16px 30px;border-radius:12px;font-size:17px;box-shadow:0 8px 24px rgba(225,18,29,.35);transition:.15s}
 .btn:hover{background:#ff1f2b;transform:translateY(-2px)}
+.regmodal-backdrop{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.72);align-items:center;justify-content:center;padding:20px}
+.regmodal-backdrop.show{display:flex}
+.regmodal{background:var(--bg2);border:1px solid var(--line);border-radius:20px;max-width:440px;width:100%;padding:36px 30px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.regmodal .check{font-size:46px;margin-bottom:12px}
+.regmodal h3{font-size:22px;font-weight:800;margin-bottom:10px}
+.regmodal p.body{color:var(--mut);font-size:14.5px;margin-bottom:22px;line-height:1.55}
+.regmodal .offerbox{background:linear-gradient(180deg,#1c1417,#141014);border:1px solid var(--red);border-radius:14px;padding:20px;margin-bottom:20px}
+.regmodal .offerbox .kicker{color:#FFC107;font-weight:800;font-size:13px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+.regmodal .offerbox .text{font-size:16.5px;font-weight:700;line-height:1.4}
+.regmodal .offerbtn{display:block;width:100%;background:var(--red);color:#fff;font-weight:800;border:none;border-radius:12px;padding:16px 20px;font-size:16px;cursor:pointer}
+.regmodal .offerbtn:hover{background:#ff1f2b}
 header{position:sticky;top:0;z-index:50;background:rgba(11,11,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 #inscriere{scroll-margin-top:90px}
 header .wrap{display:flex;align-items:center;gap:16px;padding:12px 20px}
@@ -112,7 +123,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
     <div class="kick" data-i18n="kicker">ο B2B συνεργάτης σας</div>
     <h1 data-i18n="h1">Αξεσουάρ αυτοκινήτου που φέρνουν <span style="color:var(--red2)">κέρδος</span> — όχι σκόνη στο ράφι.</h1>
     <p class="lead" data-i18n="lead">Έχετε κατάστημα ή συνεργείο αυτοκινήτων ή εταιρεία διανομής και θέλετε εμπόρευμα που <b>κινείται</b>; Γίνετε συνεργάτης της CARGUARD®.</p>
-    <span id="inscriere"></span><form id="leadform" class="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:14px;text-align:left;max-width:440px"><div style="margin-bottom:8px"><input name="AFM" data-i18n-ph="ph_vat" placeholder="ΑΦΜ / Ενδοκοινοτικό VAT (π.χ. EL123456789) *" required style="margin-bottom:4px"><div style="display:flex;align-items:center;gap:8px;margin-top:2px"><button type="button" class="vatcheck-btn" data-i18n="vatcheck_btn" style="background:#1c1c20;border:1px solid var(--line);color:var(--tx);padding:7px 12px;border-radius:8px;font-size:12.5px;cursor:pointer">Έλεγχος ΑΦΜ</button><span class="vatstatus" style="font-size:12px;color:var(--mut)"></span></div></div><div class="frow"><input name="Onoma" data-i18n-ph="ph_name" placeholder="Όνομα *" required><input name="Etaireia" data-i18n-ph="ph_company" placeholder="Εταιρεία *" required></div><div class="frow"><input name="Tilefono" type="tel" data-i18n-ph="ph_phone" placeholder="Τηλέφωνο *" required><input name="Poli" data-i18n-ph="ph_city" placeholder="Πόλη *" required></div><input name="Email" type="email" data-i18n-ph="ph_email" placeholder="Email *" required style="margin-top:8px"><input type="hidden" name="_subject" value="Nea eggrafi B2B Grecia (landing)"><input type="hidden" name="_cc" value="iosif.budai@globiz.ro"><label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;color:var(--mut);margin:8px 0 12px;line-height:1.4"><input type="checkbox" name="Synainesi_GDPR" value="Nai" required style="width:auto;margin-top:3px;flex:0 0 auto"><span data-i18n="gdpr_label">Συμφωνώ να επικοινωνήσει μαζί μου η CARGUARD® (τηλέφωνο, email ή WhatsApp) σχετικά με τη συνεργασία χονδρικής B2B. Δείτε την <a href="https://carguard.shop/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Πολιτική Απορρήτου</a> και τους <a href="https://carguard.shop/terms_and_conditions" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Όρους Χρήσης</a>.</span></label><button type="submit" class="btn" data-i18n="submit_btn" style="width:100%;border:0;cursor:pointer;font-size:16px">Στείλτε τα στοιχεία σας →</button><div class="reassure" data-i18n="reassure_hero">✓ Δωρεάν · 2 λεπτά · Σας καλούμε εντός 24ω</div></form><div id="leadok" class="leadok" style="display:none;padding:14px 0"><div style="font-size:38px">✅</div><h3 style="font-size:20px;margin:6px 0" data-i18n="thank_title">Ευχαριστούμε!</h3><p class="lead" data-i18n="thank_body">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div><div class="leadredirect" style="display:none;padding:14px 0"><div style="font-size:38px">✅</div><h3 style="font-size:20px;margin:6px 0" data-i18n="redirect_title">Ευχαριστούμε!</h3><p class="lead" data-i18n="redirect_body">Σου στείλαμε email με το όνομα χρήστη και τον κωδικό πρόσβασής σου.</p></div>
+    <span id="inscriere"></span><form id="leadform" class="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:14px;text-align:left;max-width:440px"><div style="margin-bottom:8px"><input name="AFM" data-i18n-ph="ph_vat" placeholder="ΑΦΜ / Ενδοκοινοτικό VAT (π.χ. EL123456789) *" required style="margin-bottom:4px"><div style="display:flex;align-items:center;gap:8px;margin-top:2px"><button type="button" class="vatcheck-btn" data-i18n="vatcheck_btn" style="background:#1c1c20;border:1px solid var(--line);color:var(--tx);padding:7px 12px;border-radius:8px;font-size:12.5px;cursor:pointer">Έλεγχος ΑΦΜ</button><span class="vatstatus" style="font-size:12px;color:var(--mut)"></span></div></div><div class="frow"><input name="Onoma" data-i18n-ph="ph_name" placeholder="Όνομα *" required><input name="Etaireia" data-i18n-ph="ph_company" placeholder="Εταιρεία *" required></div><div class="frow"><input name="Tilefono" type="tel" data-i18n-ph="ph_phone" placeholder="Τηλέφωνο *" required><input name="Poli" data-i18n-ph="ph_city" placeholder="Πόλη *" required></div><input name="Email" type="email" data-i18n-ph="ph_email" placeholder="Email *" required style="margin-top:8px"><input type="hidden" name="_subject" value="Nea eggrafi B2B Grecia (landing)"><input type="hidden" name="_cc" value="iosif.budai@globiz.ro"><label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;color:var(--mut);margin:8px 0 12px;line-height:1.4"><input type="checkbox" name="Synainesi_GDPR" value="Nai" required style="width:auto;margin-top:3px;flex:0 0 auto"><span data-i18n="gdpr_label">Συμφωνώ να επικοινωνήσει μαζί μου η CARGUARD® (τηλέφωνο, email ή WhatsApp) σχετικά με τη συνεργασία χονδρικής B2B. Δείτε την <a href="https://carguard.shop/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Πολιτική Απορρήτου</a> και τους <a href="https://carguard.shop/terms_and_conditions" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Όρους Χρήσης</a>.</span></label><button type="submit" class="btn" data-i18n="submit_btn" style="width:100%;border:0;cursor:pointer;font-size:16px">Στείλτε τα στοιχεία σας →</button><div class="reassure" data-i18n="reassure_hero">✓ Δωρεάν · 2 λεπτά · Σας καλούμε εντός 24ω</div></form><div id="leadok" class="leadok" style="display:none;padding:14px 0"><div style="font-size:38px">✅</div><h3 style="font-size:20px;margin:6px 0" data-i18n="thank_title">Ευχαριστούμε!</h3><p class="lead" data-i18n="thank_body">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
   </div>
   <div class="portrait"><img src="assets/logo.png" alt="CARGUARD®" style="position:absolute;top:16px;left:16px;height:26px;width:auto;filter:drop-shadow(0 2px 5px rgba(0,0,0,.95));z-index:3"><img src="assets/hajni.jpg" alt="CARGUARD® - ο συνεργάτης σας"><div class="tag"><small>CARGUARD® · Globiz Group</small><span data-i18n="portrait_tag">Ο συνεργάτης σας για ποιοτικά αξεσουάρ αυτοκινήτου</span></div></div>
 </div></section>
@@ -225,7 +236,7 @@ fbq('init','1344314721133063');fbq('track','PageView');
   <button type="submit" class="btn" data-i18n="submit_btn" style="width:100%;border:0;cursor:pointer;font-size:17px">Στείλτε τα στοιχεία σας →</button>
   <div class="reassure" data-i18n="reassure_cta">✓ Δωρεάν · 2 λεπτά · Επικοινωνούμε μαζί σας για να ολοκληρώσετε την εγγραφή</div>
 </form>
-<div class="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">✅</div><h3 style="font-size:22px;margin:8px 0" data-i18n="thank_title">Ευχαριστούμε!</h3><p class="sub" data-i18n="thank_body">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div><div class="leadredirect" style="display:none;padding:18px 0"><div style="font-size:42px">✅</div><h3 style="font-size:22px;margin:8px 0" data-i18n="redirect_title">Ευχαριστούμε!</h3><p class="sub" data-i18n="redirect_body">Σου στείλαμε email με το όνομα χρήστη και τον κωδικό πρόσβασής σου.</p></div>
+<div class="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">✅</div><h3 style="font-size:22px;margin:8px 0" data-i18n="thank_title">Ευχαριστούμε!</h3><p class="sub" data-i18n="thank_body">Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.</p></div>
 <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--line)">
   <p class="sub" style="font-size:14px;margin:0 0 12px" data-i18n="already_know">Ξέρετε ήδη ότι θέλετε να γίνετε συνεργάτης;</p>
   <a href="#inscriere" data-i18n="register_direct" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Συμπληρώστε τη φόρμα εγγραφής →</a>
@@ -252,7 +263,11 @@ var I18N = {
     reassure_hero: "✓ Δωρεάν · 2 λεπτά · Σας καλούμε εντός 24ω",
     reassure_cta: "✓ Δωρεάν · 2 λεπτά · Επικοινωνούμε μαζί σας για να ολοκληρώσετε την εγγραφή",
     thank_title: "Ευχαριστούμε!", thank_body: "Λάβαμε τα στοιχεία σας. Θα επικοινωνήσουμε σύντομα μαζί σας.",
-    redirect_title: "Ευχαριστούμε!", redirect_body: "Σου στείλαμε email με το όνομα χρήστη και τον κωδικό πρόσβασής σου.",
+    modal_title: "Ευχαριστούμε για την εγγραφή!",
+    modal_body: "Σου στείλαμε email με τον σύνδεσμο για να συνδεθείς στον λογαριασμό σου.",
+    modal_offer_kicker: "🎁 Αποκλειστική προσφορά",
+    modal_offer_text: "Μόνο τώρα, μετά την εγγραφή — διαθέσιμη για 30 λεπτά!",
+    modal_offer_btn: "Δες την προσφορά →",
     portrait_tag: "Ο συνεργάτης σας για ποιοτικά αξεσουάρ αυτοκινήτου",
     story_h2: 'Η ιστορία <span class="r">CARGUARD®</span>', story_sub: "Από ένα απλό πάθος, σε μια ευρωπαϊκή μάρκα.",
     pain_h2: 'Ξέρουμε <span class="r">πώς είναι…</span>',
@@ -310,7 +325,11 @@ var I18N = {
     reassure_hero: "✓ Free · 2 minutes · We'll call you within 24h",
     reassure_cta: "✓ Free · 2 minutes · We'll contact you to complete your registration",
     thank_title: "Thank you!", thank_body: "We've received your details. We'll be in touch shortly.",
-    redirect_title: "Thank you!", redirect_body: "We've emailed you your login username and password.",
+    modal_title: "Thank you for registering!",
+    modal_body: "We've emailed you the link to log in to your account.",
+    modal_offer_kicker: "🎁 Exclusive offer",
+    modal_offer_text: "Right now, after registration — available for 30 minutes only!",
+    modal_offer_btn: "See the offer →",
     portrait_tag: "Your partner for quality car accessories",
     story_h2: 'The <span class="r">CARGUARD®</span> Story', story_sub: "From a simple passion to a European brand.",
     pain_h2: 'We know <span class="r">how it feels…</span>',
@@ -396,9 +415,10 @@ document.querySelectorAll("[data-lang-btn]").forEach(function(btn){
     fetch(TRIPWIRE_BASE+"/api/tripwire/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}).then(function(r){return r.json();}).then(function(j){
       if(j.tripwireUrl){
         if(window.fbq)fbq("track","Lead");
-        lf.style.display="none";
-        var rd=lf.parentNode.querySelector(".leadredirect");if(rd)rd.style.display="block";
-        setTimeout(function(){window.location.href=TRIPWIRE_BASE+j.tripwireUrl;},2500);
+        var modal=document.getElementById("regModal");
+        var modalBtn=document.getElementById("regModalBtn");
+        modalBtn.onclick=function(){window.location.href=TRIPWIRE_BASE+j.tripwireUrl;};
+        modal.classList.add("show");
       }
       else{lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";}
     }).catch(function(){lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";});
@@ -407,5 +427,18 @@ function cgCheckVatGr(vatInput,companyInput,cityInput,status){var val=vatInput.v
 document.querySelectorAll('[name="AFM"]').forEach(function(vatInput){var form=vatInput.closest("form");var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=form.querySelector(".vatstatus");vatInput.addEventListener("blur",function(){cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
 document.querySelectorAll(".vatcheck-btn").forEach(function(btn){btn.addEventListener("click",function(e){e.preventDefault();var form=btn.closest("form");var vatInput=form.querySelector('[name="AFM"]');var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=btn.parentNode.querySelector(".vatstatus");cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
 })();</script>
-<div class="sticky-cta"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a><small data-i18n="sticky_small">Δωρεάν · 2 λεπτά · Πρόσβαση στις τιμές χονδρικής</small></div></body>
+<div class="sticky-cta"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a><small data-i18n="sticky_small">Δωρεάν · 2 λεπτά · Πρόσβαση στις τιμές χονδρικής</small></div>
+<div class="regmodal-backdrop" id="regModal">
+  <div class="regmodal">
+    <div class="check">✅</div>
+    <h3 data-i18n="modal_title">Ευχαριστούμε για την εγγραφή!</h3>
+    <p class="body" data-i18n="modal_body">Σου στείλαμε email με τον σύνδεσμο για να συνδεθείς στον λογαριασμό σου.</p>
+    <div class="offerbox">
+      <div class="kicker" data-i18n="modal_offer_kicker">🎁 Αποκλειστική προσφορά</div>
+      <div class="text" data-i18n="modal_offer_text">Μόνο τώρα, μετά την εγγραφή — διαθέσιμη για 30 λεπτά!</div>
+    </div>
+    <button type="button" class="offerbtn" id="regModalBtn" data-i18n="modal_offer_btn">Δες την προσφορά →</button>
+  </div>
+</div>
+</body>
 </html>
