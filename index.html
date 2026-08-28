@@ -417,7 +417,8 @@ document.querySelectorAll("[data-lang-btn]").forEach(function(btn){
         if(window.fbq)fbq("track","Lead");
         var modal=document.getElementById("regModal");
         var modalBtn=document.getElementById("regModalBtn");
-        modalBtn.onclick=function(){window.location.href=TRIPWIRE_BASE+j.tripwireUrl;};
+        var twLangSuffix=(window.CG_LANG==="en")?"?lang=en":"";
+        modalBtn.onclick=function(){window.location.href=TRIPWIRE_BASE+j.tripwireUrl+twLangSuffix;};
         modal.classList.add("show");
       }
       else{lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";}
