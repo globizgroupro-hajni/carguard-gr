@@ -105,7 +105,7 @@ footer b{color:#fff}
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;background:rgba(11,11,13,.96);border-top:1px solid var(--line);padding:10px 14px;display:none;backdrop-filter:blur(6px)}
 .sticky-cta a{display:block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:14px;border-radius:10px;font-size:16px;text-align:center}
 .sticky-cta small{display:block;color:var(--mut);font-size:12px;margin-top:6px;text-align:center}
-@media(max-width:760px){.sticky-cta{display:block}body{padding-bottom:88px}}
+@media(max-width:760px){.sticky-cta{display:block;transition:opacity .2s,transform .2s}.sticky-cta.is-hidden{opacity:0;transform:translateY(20px);pointer-events:none}body{padding-bottom:88px}}
 #leadform input{width:100%;background:#0f0f12;border:1px solid var(--line);border-radius:10px;padding:13px 15px;color:var(--tx);font-size:15px;margin-bottom:10px;font-family:inherit}
 #leadform input:focus{outline:none;border-color:var(--red2)}
 #leadform .frow{display:flex;gap:10px}
@@ -897,11 +897,13 @@ function cgCheckVatGr(vatInput,companyInput,cityInput,status){var val=vatInput.v
 document.querySelectorAll('[name="AFM"]').forEach(function(vatInput){var form=vatInput.closest("form");var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=form.querySelector(".vatstatus");vatInput.addEventListener("blur",function(){cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
 document.querySelectorAll(".vatcheck-btn").forEach(function(btn){btn.addEventListener("click",function(e){e.preventDefault();var form=btn.closest("form");var vatInput=form.querySelector('[name="AFM"]');var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=btn.parentNode.querySelector(".vatstatus");cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
 var socialFloat=document.querySelector(".social-float");
-if(socialFloat&&"IntersectionObserver" in window){
+var stickyCta=document.querySelector(".sticky-cta");
+if((socialFloat||stickyCta)&&"IntersectionObserver" in window){
   var visibleForms=new Set();
   var io=new IntersectionObserver(function(entries){
     entries.forEach(function(entry){ if(entry.isIntersecting) visibleForms.add(entry.target); else visibleForms.delete(entry.target); });
-    socialFloat.classList.toggle("is-hidden", visibleForms.size>0);
+    if(socialFloat) socialFloat.classList.toggle("is-hidden", visibleForms.size>0);
+    if(stickyCta) stickyCta.classList.toggle("is-hidden", visibleForms.size>0);
   },{rootMargin:"-10% 0px -10% 0px"});
   document.querySelectorAll("form.leadform, #regModal .offerbox").forEach(function(el){io.observe(el);});
 }
