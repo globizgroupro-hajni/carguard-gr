@@ -27,7 +27,8 @@ img{max-width:100%;display:block}
 header{position:sticky;top:0;z-index:50;background:rgba(11,11,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 #inscriere{scroll-margin-top:90px}
 header .wrap{display:flex;align-items:center;gap:16px;padding:12px 20px}
-.social-float{position:fixed;right:20px;bottom:24px;z-index:150;display:flex;flex-direction:column;gap:12px}
+.social-float{position:fixed;right:20px;bottom:24px;z-index:150;display:flex;flex-direction:column;gap:12px;transition:opacity .2s,transform .2s}
+.social-float.is-hidden{opacity:0;transform:translateX(20px);pointer-events:none}
 .social-float a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.4);text-decoration:none;transition:transform .15s;color:#fff}
 .social-float a:hover{transform:scale(1.08)}
 .social-float a svg{width:25px;height:25px}
@@ -895,6 +896,15 @@ document.querySelectorAll("[data-lang-btn]").forEach(function(btn){
 function cgCheckVatGr(vatInput,companyInput,cityInput,status){var val=vatInput.value.trim();if(!val)return;var L=I18N[window.CG_LANG]||I18N.el;status.textContent=L.vat_checking;status.style.color="#a7a7ad";var viesCountry=LANG_TO_VIES[window.CG_LANG]||"EL";fetch("https://178-105-10-138.sslip.io/api/vat/validate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({vatNumber:val,country:viesCountry})}).then(function(r){return r.json();}).then(function(j){if(j.status==="valid"){status.textContent=L.vat_valid;status.style.color="#22C55E";if(companyInput&&!companyInput.value&&j.companyName)companyInput.value=j.companyName;if(cityInput&&!cityInput.value&&j.companyAddress)cityInput.value=j.companyAddress;}else{status.textContent=L.vat_invalid;status.style.color="#ff5959";}}).catch(function(){status.textContent=L.vat_error;status.style.color="#ff5959";});}
 document.querySelectorAll('[name="AFM"]').forEach(function(vatInput){var form=vatInput.closest("form");var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=form.querySelector(".vatstatus");vatInput.addEventListener("blur",function(){cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
 document.querySelectorAll(".vatcheck-btn").forEach(function(btn){btn.addEventListener("click",function(e){e.preventDefault();var form=btn.closest("form");var vatInput=form.querySelector('[name="AFM"]');var companyInput=form.querySelector('[name="Etaireia"]');var cityInput=form.querySelector('[name="Poli"]');var status=btn.parentNode.querySelector(".vatstatus");cgCheckVatGr(vatInput,companyInput,cityInput,status);});});
+var socialFloat=document.querySelector(".social-float");
+if(socialFloat&&"IntersectionObserver" in window){
+  var formsInView=0;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){ if(entry.isIntersecting) formsInView++; else formsInView=Math.max(0,formsInView-1); });
+    socialFloat.classList.toggle("is-hidden", formsInView>0);
+  },{rootMargin:"-10% 0px -10% 0px"});
+  document.querySelectorAll("form.leadform, #regModal .offerbox").forEach(function(el){io.observe(el);});
+}
 })();</script>
 <div class="sticky-cta"><a class="btn" data-i18n="cta_join" href="#inscriere">Γίνε συνεργάτης →</a><small data-i18n="sticky_small">Δωρεάν · 2 λεπτά · Πρόσβαση στις τιμές χονδρικής</small></div>
 <div class="regmodal-backdrop" id="regModal">
