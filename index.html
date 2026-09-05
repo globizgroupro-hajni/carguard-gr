@@ -884,11 +884,8 @@ document.querySelectorAll("[data-lang-btn]").forEach(function(btn){
     fetch(TRIPWIRE_BASE+"/api/tripwire/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}).then(function(r){return r.json();}).then(function(j){
       if(j.tripwireUrl){
         if(window.fbq)fbq("track","Lead");
-        var modal=document.getElementById("regModal");
-        var modalBtn=document.getElementById("regModalBtn");
         var twLangSuffix=(window.CG_LANG==="en")?"?lang=en":"";
-        modalBtn.onclick=function(){window.location.href=TRIPWIRE_BASE+j.tripwireUrl+twLangSuffix;};
-        modal.classList.add("show");
+        window.location.href=TRIPWIRE_BASE+j.tripwireUrl+twLangSuffix;
       }
       else{lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";}
     }).catch(function(){lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";});
